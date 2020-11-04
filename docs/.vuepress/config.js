@@ -19,7 +19,7 @@ module.exports = {
   ],
   themeConfig: {
     repo: 'adempiere/adempiere-vue',
-    docsRepo: 'erpcya/adempiere-vue-site',
+    docsRepo: 'adempiere/adempiere-vue-site',
     docsDir: 'docs',
     editLinks: true,
     sidebarDepth: 3,
