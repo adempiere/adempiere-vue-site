@@ -1,7 +1,7 @@
 {
-  "name": "vue-element-admin-site",
+  "name": "adempiere-vue-site",
   "version": "2.0.0",
-  "description": "vue-element-admin-site",
+  "description": "adempiere-vue-site have all related to documentation of ADempiere Vue Client",
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev docs",
