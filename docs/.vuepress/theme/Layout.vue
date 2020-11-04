@@ -43,7 +43,7 @@ import SWUpdatePopup from '@default-theme/SWUpdatePopup.vue'
 import { resolveSidebarItems } from '@default-theme/util'
 import Swal from 'sweetalert2'
 import Home from './Home.vue'
-import { loadGitter, loadCarbon } from './utils'
+import { loadGitter/*, loadCarbon*/ } from './utils'
 
 export default {
   components: {
@@ -141,7 +141,7 @@ export default {
   },
   mounted() {
     loadGitter()
-    loadCarbon()
+    // loadCarbon()
     window.addEventListener('scroll', this.onScroll)
     // configure progress bar
     nprogress.configure({ showSpinner: false })
@@ -157,7 +157,7 @@ export default {
     })
     this.$on('sw-updated', this.onSWUpdated)
 
-    this.checkAdBlock()
+    // this.checkAdBlock()
   },
   methods: {
     checkLang() {
