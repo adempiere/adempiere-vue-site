@@ -1,13 +1,13 @@
-# vue-element-admin-site
-The documentation source of [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
+# adempiere-vue-site
+The documentation source of [adempiere-vue](https://github.com/adempiere/adempiere-vue)
 
-[Online](https://panjiachen.github.io/vue-element-admin-site)
+[Online](https://adempiere.github.io/adempiere-vue-site)
 
 ## Development
 
 ```bash
 # clone the project
-git clone git@github.com:PanJiaChen/vue-element-admin-site.git
+git clone git@github.com:PanJiaChen/adempiere-vue-site.git
 
 # install dependency
 npm install
@@ -16,6 +16,6 @@ npm install
 npm run dev
 ```
 
-open http://localhost:8080/vue-element-admin-site/
+open http://localhost:8080/adempiere-vue-site/
 
 > Generator by [vuepress](https://github.com/vuejs/vuepress)

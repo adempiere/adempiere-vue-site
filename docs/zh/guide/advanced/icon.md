@@ -1,6 +1,6 @@
 # 图标
 
-如果你没有在本项目 [Icon](https://github.com/PanJiaChen/vue-element-admin/tree/master/src/icons/svg) 中找到需要的图标，可以到 [iconfont.cn](http://iconfont.cn/) 上选择并生成自己的业务图标库，再进行使用。或者其它 svg 图标网站，下载 svg 并放到文件夹之中就可以了。
+如果你没有在本项目 [Icon](https://github.com/adempiere/adempiere-vue/tree/master/src/icons/svg) 中找到需要的图标，可以到 [iconfont.cn](http://iconfont.cn/) 上选择并生成自己的业务图标库，再进行使用。或者其它 svg 图标网站，下载 svg 并放到文件夹之中就可以了。
 
 ## 生成图标库代码
 
@@ -14,7 +14,7 @@
 
 **现在本项目支持和推荐单独导出 svg 的引入使用方式。下载方式如下图：**
 
-<img width="600" src="https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/1f8b1e56-cfd9-4ef7-a0aa-dfb0c2883aa3.gif" />
+<img width="600" src="https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/1f8b1e56-cfd9-4ef7-a0aa-dfb0c2883aa3.gif" />
 
 <br />
 
@@ -35,7 +35,7 @@
 你可以改变父级的`color`或者直接改变`fill`的颜色即可。
 
 :::tip
-如果你遇到图标颜色不对，可以参照本[issue](https://github.com/PanJiaChen/vue-element-admin/issues/330)进行修改
+如果你遇到图标颜色不对，可以参照本[issue](https://github.com/adempiere/adempiere-vue/issues/330)进行修改
 :::
 
 ## 详细文章
@@ -44,6 +44,6 @@
 
 ## 目前可用图标
 
-[src/icons/svg](https://github.com/PanJiaChen/vue-element-admin/tree/master/src/icons/svg)
+[src/icons/svg](https://github.com/adempiere/adempiere-vue/tree/master/src/icons/svg)
 
-线上[预览地址](https://panjiachen.github.io/vue-element-admin/#/icon/index)
+线上[预览地址](https://adempiere.github.io/adempiere-vue/#/icon/index)

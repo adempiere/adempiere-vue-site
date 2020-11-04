@@ -57,6 +57,6 @@ Other attributes of the element's `el-pagination` support are also supported. Se
 
 ## Source Code && Demo
 
-- [Source Code](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/components/Pagination/index.vue)
+- [Source Code](https://github.com/adempiere/adempiere-vue/blob/master/src/components/Pagination/index.vue)
 
-- [Online Demo](https://panjiachen.github.io/vue-element-admin/#/table/complex-table)
+- [Online Demo](https://adempiere.github.io/adempiere-vue/#/table/complex-table)

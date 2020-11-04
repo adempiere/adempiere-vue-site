@@ -73,4 +73,4 @@ const defaultOptions = {
 
 ## Ejemplo en Linea
 
-[enlace](https://panjiachen.github.io/vue-element-admin/#/components/markdown)
+[enlace](https://adempiere.github.io/adempiere-vue/#/components/markdown)

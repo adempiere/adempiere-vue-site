@@ -1,6 +1,6 @@
 ## Environment Variables
 
-`vue-element-admin` 4.0+ is built o `vue-cli`, so all environment variables are controlled based on `vue-cli`.
+`adempiere-vue` 4.0+ is built o `vue-cli`, so all environment variables are controlled based on `vue-cli`.
 
 [Official document](https://cli.vuejs.org/guide/mode-and-env.html)
 
@@ -38,4 +38,4 @@ In addition to some environment variables written in `.env`, there are some buil
 
 You can set the different parameters by executing the judgment environment with `process.env.NODE_ENV`.
 
-Specific code can learn from [vue.config.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/vue.config.js)
+Specific code can learn from [vue.config.js](https://github.com/adempiere/adempiere-vue/blob/master/vue.config.js)

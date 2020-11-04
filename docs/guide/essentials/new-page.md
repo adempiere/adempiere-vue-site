@@ -46,7 +46,7 @@ It just creates a blank route based on 'layout', and you also need to add a rout
 
 **This sidebar will appear the menu-item**
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/2ab6921d-f9bb-4fbb-a151-0e6027e23a6e.png)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/2ab6921d-f9bb-4fbb-a151-0e6027e23a6e.png)
 
 <br/>
 
@@ -75,7 +75,7 @@ If you want to ignore this automatic decision, you can use `alwaysShow: true`, s
 }
 ```
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/89d6a0b8-5cf7-4a19-9afd-7267ec454066.png)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/89d6a0b8-5cf7-4a19-9afd-7267ec454066.png)
 
 **The sidebar will appear the `submenu`.**
 
@@ -83,7 +83,7 @@ If you want to ignore this automatic decision, you can use `alwaysShow: true`, s
 
 ## Nested Routes
 
-If you have a nested Route, such as [@/views/nested](https://github.com/PanJiaChen/vue-element-admin/tree/master/src/views/nested),
+If you have a nested Route, such as [@/views/nested](https://github.com/adempiere/adempiere-vue/tree/master/src/views/nested),
 **Don't forget to manually add an `< router-view >` to the root file of the secondary directory**.
 
 ```html
@@ -96,11 +96,11 @@ If you have a nested Route, such as [@/views/nested](https://github.com/PanJiaCh
 </template>
 ```
 
-Such as: [@/views/nested/menu1/index.vue](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/views/nested/menu1/index.vue).
+Such as: [@/views/nested/menu1/index.vue](https://github.com/adempiere/adempiere-vue/blob/master/src/views/nested/menu1/index.vue).
 
 **Note:** As many `<router-view>` as the level of routes nested.
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/9459de62-64d0-4819-9730-daf3f9889018.png)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/9459de62-64d0-4819-9730-daf3f9889018.png)
 
 <br/>
 
@@ -111,13 +111,13 @@ a view.
 
 Suggestion if a component or utils function only used in this view, just create a component folder under this view, lt is more convenient for each module to maintain its own `utils` or `components`.
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/8ca55a30-c22c-4143-aa8d-2a0d3e04fc33.png)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/8ca55a30-c22c-4143-aa8d-2a0d3e04fc33.png)
 
 <br/>
 
 ## Create Api
 
-Finally, under the [@/api](https://github.com/PanJiaChen/vue-element-admin/tree/master/src/api) folder, create the corresponding api service for this module.
+Finally, under the [@/api](https://github.com/adempiere/adempiere-vue/tree/master/src/api) folder, create the corresponding api service for this module.
 
 ## Create Component
 

@@ -22,7 +22,7 @@ const Foo = () => import('./Foo.vue')
 module.exports = file => require('@/views/' + file + '.vue').default // vue-loader at least v13.0.0+
 ```
 
-**这里注意一下该写法只支持 `vue-loader at least v13.0.0+`理由 [vue-element-admin/issues/231](https://github.com/PanJiaChen/vue-element-admin/issues/231)**
+**这里注意一下该写法只支持 `vue-loader at least v13.0.0+`理由 [adempiere-vue/issues/231](https://github.com/adempiere/adempiere-vue/issues/231)**
 
 **生产环境：**
 
@@ -36,7 +36,7 @@ module.exports = file => () => import('@/views/' + file + '.vue')
 
 > Every module that could potentially be requested on an import() call is included. For example, import(./locale/\${language}.json) will cause every .json file in the ./locale directory to be bundled into the new chunk. At run time, when the variable language has been computed, any file like english.json or german.json will be available for consumption.
 
-`@/views/下的 .vue` 文件都会被打包。不管你是否被依赖。所以这样就产生了一个副作用，就是会多打包一些可能永远都用不到 js 代码。当然这只会增加 dist 文件的大小，但不会对线上代码产生任何的副作用。[相关 issue](https://github.com/PanJiaChen/vue-element-admin/issues/292)
+`@/views/下的 .vue` 文件都会被打包。不管你是否被依赖。所以这样就产生了一个副作用，就是会多打包一些可能永远都用不到 js 代码。当然这只会增加 dist 文件的大小，但不会对线上代码产生任何的副作用。[相关 issue](https://github.com/adempiere/adempiere-vue/issues/292)
 
 ::: tip
 用户自己可以根据业务情况来衡量一下是否采用本方案，如果你的项目页面不超过几十个，本地开发热更新速度你还能接受的话，可以直接所有环境下都是用懒加载避免此副作用。
@@ -72,11 +72,11 @@ module.exports = file => () => import('@/views/' + file + '.vue')
  { path: '/login', component: () => import('@/views/login/index')}
 ```
 
-[相关代码改动](https://github.com/PanJiaChen/vue-element-admin/pull/727)
+[相关代码改动](https://github.com/adempiere/adempiere-vue/pull/727)
 
 ## vue-cli@3 [该方案已淘汰]
 
-`vue-element-admin@4` 在新版本中已修改为基于 `vue-cli`来进行构建。所以在新版本中你只要在`.env.development`环境变量配置文件中设置`VUE_CLI_BABEL_TRANSPILE_MODULES:true`就可以了，具体[代码](https://github.com/PanJiaChen/vue-element-admin/blob/master/.env.development)。
+`adempiere-vue@4` 在新版本中已修改为基于 `vue-cli`来进行构建。所以在新版本中你只要在`.env.development`环境变量配置文件中设置`VUE_CLI_BABEL_TRANSPILE_MODULES:true`就可以了，具体[代码](https://github.com/adempiere/adempiere-vue/blob/master/.env.development)。
 
 它的实现逻辑和原理与之前还是一样的，还是基于`babel-plugin-dynamic-import-node`来实现的。之所以在`vue-cli`中只需要设置一个变量就可以了，是借用了`vue-cli`它的默认配置，它帮你代码都写好了。通过阅读[源码](https://github.com/vuejs/vue-cli/blob/dev/packages/@vue/babel-preset-app/index.js)可知，`vue-cli`会通过`VUE_CLI_BABEL_TRANSPILE_MODULES`这个环境变量来区分是否使用`babel-plugin-dynamic-import-node`，所以我们只要开启它就可以。虽然它的初衷是为了单元测试的，但正好满足了我们的需求。
 

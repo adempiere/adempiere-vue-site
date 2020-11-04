@@ -12,7 +12,7 @@ En el proyecto de mi empresa, el backend simula los datos mediante [swagger](htt
 
 ## Easy-mock
 
-[vue-admin-template](https://github.com/PanJiaChen/vue-admin-template) anteriormente utilizó [easy-mock](https://easy-mock.com/login) para simular datos.
+[vue-admin-template](https://github.com/adempiere/vue-admin-template) anteriormente utilizó [easy-mock](https://easy-mock.com/login) para simular datos.
 Es una visualización pura de front-end y puede generar rápidamente servicios de persistencia para datos analógicos. Muy fácil de usar y también se puede combinar con `swagger`, tiene soporte para cross-domain, ya sea un equipo o un proyecto personal, vale la pena intentarlo.
 
 [Demo en línea](https://easy-mock.com/)
@@ -23,23 +23,23 @@ La versión en línea de `vue-admin-template` ya no usa `easy-mock`. Debido a qu
 
 ## Mockjs
 
-Como [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) es un proyecto personal de front-end puro, todos los datos de simulación son generados por [mockjs](https://github.com/Nuysoft/Mock). Su principio es: interceptar todas las solicitudes y proxy al local, y luego simular datos, por lo que descubrirás que no se emiten solicitudes en `red`.
+Como [adempiere-vue](https://github.com/adempiere/adempiere-vue) es un proyecto personal de front-end puro, todos los datos de simulación son generados por [mockjs](https://github.com/Nuysoft/Mock). Su principio es: interceptar todas las solicitudes y proxy al local, y luego simular datos, por lo que descubrirás que no se emiten solicitudes en `red`.
 
-Pero su mayor problema es el mecanismo de implementación. Sobrescribe el objeto `XMLHttpRequest` del navegador para interceptar todas las solicitudes y el proxy al local. En la mayoría de los casos es bastante conveniente de usar, pero debido a que reescribe el objeto `XMLHttpRequest`, por ejemplo, el método `progress` o algunas bibliotecas de terceros que dependen de `XMLHttpRequest` serán incompatibles. Mirando los [issues](https://github.com/PanJiaChen/vue-element-admin/issues?utf8=%E2%9C%93&q=mock) de mi proyecto, sabrás cuántas personas tienen problemas.
+Pero su mayor problema es el mecanismo de implementación. Sobrescribe el objeto `XMLHttpRequest` del navegador para interceptar todas las solicitudes y el proxy al local. En la mayoría de los casos es bastante conveniente de usar, pero debido a que reescribe el objeto `XMLHttpRequest`, por ejemplo, el método `progress` o algunas bibliotecas de terceros que dependen de `XMLHttpRequest` serán incompatibles. Mirando los [issues](https://github.com/adempiere/adempiere-vue/issues?utf8=%E2%9C%93&q=mock) de mi proyecto, sabrás cuántas personas tienen problemas.
 
-También tiene un problema porque son datos que se simulan localmente y en realidad no realizan ninguna solicitud de red. Por lo tanto, la depuración local es muy problemática y solo se puede depurar mediante `console.log`. Toma el ejemplo de `vue-element-admin`. Si deseas averiguar qué datos devuelve la api `getInfo()`, solo puedes saberlo mirando el código fuente o manualmente `Debug`.
+También tiene un problema porque son datos que se simulan localmente y en realidad no realizan ninguna solicitud de red. Por lo tanto, la depuración local es muy problemática y solo se puede depurar mediante `console.log`. Toma el ejemplo de `adempiere-vue`. Si deseas averiguar qué datos devuelve la api `getInfo()`, solo puedes saberlo mirando el código fuente o manualmente `Debug`.
 
 ## Nueva manera <Badge text="v4.0.0+"/>
 
 Después de la versión `v4.0`, se lanzará un `mock-server` localmente para simular los datos, y el entorno en línea continuará utilizando `mockjs` para la simulación. (Debido a que este proyecto es un proyecto front-end puro, también puedes construir un servidor en línea para proporcionar datos).
 
-La ventaja de esta manera es resolver los puntos críticos anteriores mientras se conservan las ventajas de 'mockjs'. Dado que nuestro simulacro se implementa completamente basado en `webpack-dev-serve`, `mock-server` se iniciará automáticamente junto con el proyecto, y también pasará [chokidar](https://github.com/paulmillr/chokidar) para observar los cambios en el contenido de la carpeta `mock`. Cuando se produce un cambio, la interfaz `mock-api` registrada previamente se borra y la nueva interfaz se vuelve a montar dinámicamente para admitir actualizaciones. Si estás interesado, puedes mirar el código [mock-server.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/mock/mock-server.js). Dado que es un verdadero "servidor", puedes conocer claramente la estructura de datos devuelta por la interfaz a través de la sección "red" de Chrome. Al mismo tiempo, resuelves el problema de que los `mockjs` anteriores rescriben el objeto`XMLHttpRequest`, lo que hace que muchas bibliotecas de terceros fallen.
+La ventaja de esta manera es resolver los puntos críticos anteriores mientras se conservan las ventajas de 'mockjs'. Dado que nuestro simulacro se implementa completamente basado en `webpack-dev-serve`, `mock-server` se iniciará automáticamente junto con el proyecto, y también pasará [chokidar](https://github.com/paulmillr/chokidar) para observar los cambios en el contenido de la carpeta `mock`. Cuando se produce un cambio, la interfaz `mock-api` registrada previamente se borra y la nueva interfaz se vuelve a montar dinámicamente para admitir actualizaciones. Si estás interesado, puedes mirar el código [mock-server.js](https://github.com/adempiere/adempiere-vue/blob/master/mock/mock-server.js). Dado que es un verdadero "servidor", puedes conocer claramente la estructura de datos devuelta por la interfaz a través de la sección "red" de Chrome. Al mismo tiempo, resuelves el problema de que los `mockjs` anteriores rescriben el objeto`XMLHttpRequest`, lo que hace que muchas bibliotecas de terceros fallen.
 
-Todas las solicitudes para este proyecto se envían a través del paquete [request.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/utils/request.js), mediante la lectura del código fuente puedes encontrar que todas las solicitudes están configuradas en `baseURL`, y este se configura dinámicamente al leer la variable de entorno `process.env.VUE_APP_BASE_API`, para que podamos usar diferentes entornos.
+Todas las solicitudes para este proyecto se envían a través del paquete [request.js](https://github.com/adempiere/adempiere-vue/blob/master/src/utils/request.js), mediante la lectura del código fuente puedes encontrar que todas las solicitudes están configuradas en `baseURL`, y este se configura dinámicamente al leer la variable de entorno `process.env.VUE_APP_BASE_API`, para que podamos usar diferentes entornos.
 
 ## Eliminar
 
-Si no deseas usar `mock-server`, solo el middleware `after` de `webpack-dev-server` desde [vue.config.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/vue.config.js).
+Si no deseas usar `mock-server`, solo el middleware `after` de `webpack-dev-server` desde [vue.config.js](https://github.com/adempiere/adempiere-vue/blob/master/vue.config.js).
 
 Por defecto, las solicitudes locales son proxy para `http://localhost:${port}/mock`, y puedes modificar 'proxy' si deseas ajustar a tu propia dirección simulada.
 
@@ -64,7 +64,7 @@ after: require('./mock/mock-server.js')
 
 Si deseas agregar datos simulados, solo busca el archivo `mock` en la carpeta raíz, agrega la ruta correspondiente, intercepta y simula los datos.
 
-Por ejemplo, necesito agregar una API para obtener la cantidad de comentarios debajo de un artículo en [src/api/article](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/api/article.js) a través de `fetchComments`. Primero crea una nueva api:
+Por ejemplo, necesito agregar una API para obtener la cantidad de comentarios debajo de un artículo en [src/api/article](https://github.com/adempiere/adempiere-vue/blob/master/src/api/article.js) a través de `fetchComments`. Primero crea una nueva api:
 
 ```js
 export function fetchComments(id) {
@@ -75,7 +75,7 @@ export function fetchComments(id) {
 }
 ```
 
-Después de declarar la API, necesitamos encontrar la carpeta simulada correspondiente [mock/article.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/mock/article.js), debajo Creamos una API simulada que intercepte las rutas.
+Después de declarar la API, necesitamos encontrar la carpeta simulada correspondiente [mock/article.js](https://github.com/adempiere/adempiere-vue/blob/master/mock/article.js), debajo Creamos una API simulada que intercepte las rutas.
 
 **Ten en cuenta que la intercepción simulada se basa en el enrutamiento. Asegúrate de que la ruta de datos simulados coincida con tu ruta de la API (soporte regular)**
 
@@ -105,7 +105,7 @@ Después de declarar la API, necesitamos encontrar la carpeta simulada correspon
 
 La operación más común es: has simulado algunos datos localmente, y una vez que el backend completa la API, reemplaza gradualmente la API del simulacro original.
 
-Tomemos como ejemplo la API `getRoles` en [src/api/role.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/api/role.js). Originalmente se simuló de [mock/role/index.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/mock/role/index.js). Ahora necesitamos cambiarlo a datos reales de back-end, siempre que esté en [mock/role/index.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/mock/role/index.js). Encuentra la ruta correspondiente y luego elimínala. En este momento puedes ver los datos reales en `network`.
+Tomemos como ejemplo la API `getRoles` en [src/api/role.js](https://github.com/adempiere/adempiere-vue/blob/master/src/api/role.js). Originalmente se simuló de [mock/role/index.js](https://github.com/adempiere/adempiere-vue/blob/master/mock/role/index.js). Ahora necesitamos cambiarlo a datos reales de back-end, siempre que esté en [mock/role/index.js](https://github.com/adempiere/adempiere-vue/blob/master/mock/role/index.js). Encuentra la ruta correspondiente y luego elimínala. En este momento puedes ver los datos reales en `network`.
 
 ```js
 // Lo declarado en la api
@@ -131,22 +131,22 @@ export function getRoles() {
 
 ## Servidores múltiples
 
-Actualmente, el proyecto solo inicia un `mock-server`, por supuesto, también puedes tener tu propia interfaz `mock-server` o proxy. Algunas API pueden soportar este servicio, otras pueden soportar otros. Simplemente configúralos en un `baseURL` diferente. [@/utils/request.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/utils/request.js)
+Actualmente, el proyecto solo inicia un `mock-server`, por supuesto, también puedes tener tu propia interfaz `mock-server` o proxy. Algunas API pueden soportar este servicio, otras pueden soportar otros. Simplemente configúralos en un `baseURL` diferente. [@/utils/request.js](https://github.com/adempiere/adempiere-vue/blob/master/src/utils/request.js)
 
-A continuación, configura múltiples `proxy` de acuerdo con las reglas de url establecidas en [vue.config.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/vue.config.js).
+A continuación, configura múltiples `proxy` de acuerdo con las reglas de url establecidas en [vue.config.js](https://github.com/adempiere/adempiere-vue/blob/master/vue.config.js).
 
 [Documentos relacionados](https://webpack.docschina.org/configuration/dev-server/#devserver-proxy)
 
 ## Habilitar simulación de front end puro
 
-Ahora en [mock/index.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/mock/index.js#L19) también se encapsula un método simulado de front-end puro, solo necesita estar en [src/main.js](https://github.com/PanJiaChen/vue-element-admin/tree/master/src):
+Ahora en [mock/index.js](https://github.com/adempiere/adempiere-vue/blob/master/mock/index.js#L19) también se encapsula un método simulado de front-end puro, solo necesita estar en [src/main.js](https://github.com/adempiere/adempiere-vue/tree/master/src):
 
 ```js
 import { mockXHR } from '../mock'
 mockXHR()
 ```
 
-Esto se convertirá en pura información simulada de front-end y al igual que la versión anterior a la `v4.0`, el principio es el anterior. La [demo](https://panjiachen.github.io/vue-element-admin) en línea que estás viendo actualmente es así.
+Esto se convertirá en pura información simulada de front-end y al igual que la versión anterior a la `v4.0`, el principio es el anterior. La [demo](https://adempiere.github.io/adempiere-vue) en línea que estás viendo actualmente es así.
 
 ## Cambiar datos simulados locales y en línea
 
@@ -175,7 +175,7 @@ VUE_APP_BASE_API = '/prod-api' #Inyecta la ruta raíz de la API de producción
 ```
 
 Luego crea una instancia de `axios` basada en la variable de entorno para tener una `baseURL` diferente.
-[@/utils/request.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/utils/request.js)
+[@/utils/request.js](https://github.com/adempiere/adempiere-vue/blob/master/src/utils/request.js)
 
 ```js
 // crear una instancia de axios

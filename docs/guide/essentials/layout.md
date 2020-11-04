@@ -2,17 +2,17 @@
 
 The overall layout of the page is the outermost frame structure of a product and often includes navigation, sidebars, breadcrumbs, and content. To understand a admin project, first understand its basic layout.
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/7066d74f-12c5-47d6-b6ad-f22b43fec917.png)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/7066d74f-12c5-47d6-b6ad-f22b43fec917.png)
 
 ::: tip Code
-[@/layout](https://github.com/PanJiaChen/vue-element-admin/tree/master/src/layout)
+[@/layout](https://github.com/adempiere/adempiere-vue/tree/master/src/layout)
 :::
 
 `@` is webpack's [alias](https://webpack.js.org/configuration/resolve/#resolve-alias). If don't understand please study it yourself.
 
 <br>
 
-Most of the pages in `vue-element-admin` are based on this `layout`, except that individual pages such as: `login` , `404`, `401` , etc., do not use this layout. It is also easy if you want to have multiple layouts in a project, as long as you choose different layout component in the first-level routing.
+Most of the pages in `adempiere-vue` are based on this `layout`, except that individual pages such as: `login` , `404`, `401` , etc., do not use this layout. It is also easy if you want to have multiple layouts in a project, as long as you choose different layout component in the first-level routing.
 
 ```js
 // No layout
@@ -55,13 +55,13 @@ This uses vue-router [routing nesting](https://router.vuejs.org/guide/essentials
 ## app-main
 
 ::: tip Code
-[@/layout/components/AppMain](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/layout/components/AppMain.vue)
+[@/layout/components/AppMain](https://github.com/adempiere/adempiere-vue/blob/master/src/layout/components/AppMain.vue)
 :::
 
 Here is a layer of `keep-alive` outside the `app-main` is mainly to cache `<router-view>`, with the `tabs-view` tab navigation of the page, if you do not need to [remove](tags-view.md) it.
 
 The `transition` defines the switching animation between pages, you can modify the transition animation according to your own needs. Related [documentation](https://vuejs.org/v2/guide/transitions.html).
-Two transition animations of `fade` and `fade-transform` are provided by default. For specific css implementation, see [transition.scss](https://github.com/PanJiaChen/vue-element-admin/blob/master/src /styles/transition.scss). If you need to adjust, you can adjust the `name` of `transition` in [AppMain.vue](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/layout/components/AppMain.vue).
+Two transition animations of `fade` and `fade-transform` are provided by default. For specific css implementation, see [transition.scss](https://github.com/adempiere/adempiere-vue/blob/master/src /styles/transition.scss). If you need to adjust, you can adjust the `name` of `transition` in [AppMain.vue](https://github.com/adempiere/adempiere-vue/blob/master/src/layout/components/AppMain.vue).
 
 <br>
 
@@ -69,7 +69,7 @@ Two transition animations of `fade` and `fade-transform` are provided by default
 
 **Different router the same component vue** In a real work, there are many situations. such as:
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/ac5047c9-cb75-4415-89e3-9386c42f3ef9.jpeg)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/ac5047c9-cb75-4415-89e3-9386c42f3ef9.jpeg)
 
 The same component is used to create pages and edit pages. By default, when these two pages are switched, it will not trigger the created or mounted hooks of vue. [Officials say](https://router.vuejs.org/guide/advanced/data-fetching.html#data-fetching) that you can do this through the change of watch `$route`. To tell the truth it's still very troublesome. Later I discovered that I could simply add a unique key to the router-view to ensure that the routing hooks are re-rendered when the route is switched. This is much simpler.
 
@@ -87,7 +87,7 @@ computed: {
 ::: tip
 **Or** You can declare two different views like the `editForm` and `createForm` in this project but introduce the same component.
 
-Code: [@/views/example](https://github.com/PanJiaChen/vue-element-admin/tree/master/src/views/example)
+Code: [@/views/example](https://github.com/adempiere/adempiere-vue/tree/master/src/views/example)
 :::
 
 ```html

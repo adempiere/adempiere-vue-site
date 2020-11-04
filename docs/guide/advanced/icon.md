@@ -1,6 +1,6 @@
 # Icon
 
-If you do not find the desired icon in the [Icon](https://github.com/PanJiaChen/vue-element-admin/tree/master/src/icons/svg) of this project, you can select and generate your own business icon library on [iconfont.cn](http://iconfont.cn/)and use it again. Or other svg icon website, download svg and put it in this folder.
+If you do not find the desired icon in the [Icon](https://github.com/adempiere/adempiere-vue/tree/master/src/icons/svg) of this project, you can select and generate your own business icon library on [iconfont.cn](http://iconfont.cn/)and use it again. Or other svg icon website, download svg and put it in this folder.
 
 ## Generate icon library code
 
@@ -14,7 +14,7 @@ First, search for and find the icon you need, and collect it into your shopping 
 
 ** This project now supports and recommends separate export of svg usage. Download method as shown below:**
 
-<img width="600" src="https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/1f8b1e56-cfd9-4ef7-a0aa-dfb0c2883aa3.gif" />
+<img width="600" src="https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/1f8b1e56-cfd9-4ef7-a0aa-dfb0c2883aa3.gif" />
 
 <br />
 
@@ -35,7 +35,7 @@ After the download is complete, the downloaded .svg file is automatically import
 You can change the parent's `color` or change the color of `fill` directly.
 
 :::tip
-If you encounter an incorrect icon color, you can refer to this[issue](https://github.com/PanJiaChen/vue-element-admin/issues/330)
+If you encounter an incorrect icon color, you can refer to this[issue](https://github.com/adempiere/adempiere-vue/issues/330)
 :::
 
 ## Detailed articles
@@ -44,6 +44,6 @@ If you encounter an incorrect icon color, you can refer to this[issue](https://g
 
 ## Currently available icons
 
-[src/icons/svg](https://github.com/PanJiaChen/vue-element-admin/tree/master/src/icons/svg)
+[src/icons/svg](https://github.com/adempiere/adempiere-vue/tree/master/src/icons/svg)
 
-Online [Preview Address](https://panjiachen.github.io/vue-element-admin/#/icon/index)
+Online [Preview Address](https://adempiere.github.io/adempiere-vue/#/icon/index)

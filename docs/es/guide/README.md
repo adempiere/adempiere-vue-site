@@ -6,25 +6,25 @@ pageClass: getting-started
 
 [![vue](https://img.shields.io/badge/vue-2.6.10-brightgreen.svg)](https://github.com/vuejs/vue)
 [![element-ui](https://img.shields.io/badge/element--ui-2.7.0-brightgreen.svg)](https://github.com/ElemeFE/element)
-[![Build Status](https://travis-ci.org/PanJiaChen/vue-element-admin.svg?branch=master)](https://travis-ci.org/PanJiaChen/vue-element-admin)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/PanJiaChen/vue-element-admin/blob/master/LICENSE)
-[![GitHub release](https://img.shields.io/github/release/PanJiaChen/vue-element-admin.svg)](https://github.com/PanJiaChen/vue-element-admin/releases)
-[![donate](https://img.shields.io/badge/%24-donate-ff69b4.svg)](https://panjiachen.gitee.io/vue-element-admin-site/zh/donate)
-[![GitHub stars](https://img.shields.io/github/stars/PanJiaChen/vue-element-admin.svg?style=social&label=Stars)](https://github.com/PanJiaChen/vue-element-admin)
+[![Build Status](https://travis-ci.org/adempiere/adempiere-vue.svg?branch=master)](https://travis-ci.org/adempiere/adempiere-vue)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/adempiere/adempiere-vue/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/PanJiaChen/adempiere-vue.svg)](https://github.com/adempiere/adempiere-vue/releases)
+[![donate](https://img.shields.io/badge/%24-donate-ff69b4.svg)](https://adempiere-vue.gitee.io/adempiere-vue-site/zh/donate)
+[![GitHub stars](https://img.shields.io/github/stars/adempiere/adempiere-vue.svg?style=social&label=Stars)](https://github.com/adempiere/adempiere-vue)
 
-[vue-element-admin](http://panjiachen.github.io/vue-element-admin) es una solución front-end lista para producción para interfaces de administración. Se basa en [vue](https://github.com/vuejs/vue) y utiliza el kit de interfaz de usuario [element-ui](https://github.com/ElemeFE/element).
+[adempiere-vue](http://adempiere.github.io/adempiere-vue) es una solución front-end lista para producción para interfaces de administración. Se basa en [vue](https://github.com/vuejs/vue) y utiliza el kit de interfaz de usuario [element-ui](https://github.com/ElemeFE/element).
 
 Es un administrador vue mágico basado en el nuevo conjunto de desarrollo de vue, solución i18n incorporada, plantillas típicas para aplicaciones empresariales, muchas características increíbles. Te ayuda a construir grandes aplicaciones complejas de una sola página. Creo que sean cuales sean tus necesidades, este proyecto te ayudará.
 
 :::tip
 Este proyecto integra muchas características que no puedes usar, causará mucha redundancia de código. Si tu proyecto no presta atención a este problema, también puedes desarrollarlo directamente basándote en él.
-De lo contrario, puedes usar [vue-admin-template](https://github.com/PanJiaChen/vue-admin-template).
+De lo contrario, puedes usar [vue-admin-template](https://github.com/adempiere/vue-admin-template).
 
-- Solución integrada: [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
-- Plantilla Básica: [vue-admin-template](https://github.com/PanJiaChen/vue-admin-template)
-- Desktop: [electron-vue-admin](https://github.com/PanJiaChen/electron-vue-admin)
+- Solución integrada: [adempiere-vue](https://github.com/adempiere/adempiere-vue)
+- Plantilla Básica: [vue-admin-template](https://github.com/adempiere/vue-admin-template)
+- Desktop: [electron-vue-admin](https://github.com/adempiere/electron-vue-admin)
 - Typescript: [vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template) (Créditos: [@Armour](https://github.com/Armour))
-- Otros: [awesome-project](https://github.com/PanJiaChen/vue-element-admin/issues/2312)
+- Otros: [awesome-project](https://github.com/adempiere/adempiere-vue/issues/2312)
   :::
 
 <br/>
@@ -160,10 +160,10 @@ Este proyecto ha incorporado las siguientes plantillas, y han construido un anda
 
 ```bash
 # clonar el proyecto
-git clone https://github.com/PanJiaChen/vue-element-admin.git
+git clone https://github.com/adempiere/adempiere-vue.git
 
 # entrar en el directorio del proyecto
-cd vue-element-admin
+cd adempiere-vue
 
 # instalar dependencias
 npm install
@@ -178,23 +178,23 @@ Esto se abrirá automáticamente [http://localhost:9527](http://localhost:9527).
 
 Si ves la siguiente página, entonces has tenido éxito.
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/1bc334a6-32a8-4f29-a037-ac3f5ce32588.png)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/1bc334a6-32a8-4f29-a037-ac3f5ce32588.png)
 
 Tenemos modelos integrados, componentes estándar, datos simulados, recarga módulos hot, administración de estado, i18n, enrutador global, etc. Puedes continuar explorando otros documentos para obtener más detalles sobre esos temas.
 
 <br/>
 
 ::: tip
-**Sugerencia:** Puedes usar `vue-element-admin` como una caja de herramientas o como un repositorio de solución de integración, se recomienda hacer un desarrollo secundario sobre la base de `vue-admin-template`, si necesitas alguna característica adicional, la puedes copiar desde `vue-element-admin`.
+**Sugerencia:** Puedes usar `adempiere-vue` como una caja de herramientas o como un repositorio de solución de integración, se recomienda hacer un desarrollo secundario sobre la base de `vue-admin-template`, si necesitas alguna característica adicional, la puedes copiar desde `adempiere-vue`.
 :::
 
 ## Contribución
 
-El repositorio de documentación es [vue-element-admin-site](https://github.com/PanJiaChen/vue-element-admin-site) basado en el desarrollo [vuepress](https://github.com/vuejs/vuepress).
+El repositorio de documentación es [adempiere-vue-site](https://github.com/erpcya/adempiere-vue-site) basado en el desarrollo [vuepress](https://github.com/vuejs/vuepress).
 
 Puede haber algunos errores ortográficos o de traducción al escribir este documento. Eres bienvenido a señalar por issue o por pr.
 
-[vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) también continúa iterando, resumiendo y resumiendo más funciones, y resume las mejores prácticas de los escenarios de productos templates/components/business de negocio en el medio y de back office. Este proyecto también espera tu participación y [comentarios](https://github.com/PanJiaChen/vue-element-admin/issues).
+[adempiere-vue](https://github.com/adempiere/adempiere-vue) también continúa iterando, resumiendo y resumiendo más funciones, y resume las mejores prácticas de los escenarios de productos templates/components/business de negocio en el medio y de back office. Este proyecto también espera tu participación y [comentarios](https://github.com/adempiere/adempiere-vue/issues).
 
 ## Donar
 

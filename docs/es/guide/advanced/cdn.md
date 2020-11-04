@@ -69,7 +69,7 @@ Find `public/index.html`. Inject css and js in turn through your configured `CND
 
 There is also a small detail. If you use the global object method to introduce vue, you don't need to manually Vue.use(Vuex), it will be mounted automatically. [issue](https://github.com/vuejs/vuex/issues/731)
 
-Complete [code modification](https://github.com/PanJiaChen/vue-admin-template/commit/eaaa3c1ddadd114451a1a83e042f1fc56a9809a1)
+Complete [code modification](https://github.com/adempiere/vue-admin-template/commit/eaaa3c1ddadd114451a1a83e042f1fc56a9809a1)
 
 Finally you can use `npm run preview -- --report` to see the effect as shown:
 

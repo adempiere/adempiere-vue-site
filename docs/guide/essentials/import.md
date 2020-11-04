@@ -2,7 +2,7 @@
 
 In addition to the element-ui components and the business components built into the scaffolding, sometimes we also need to import other external components.
 
-Here to import [vue-count-to](https://github.com/PanJiaChen/vue-countTo) as an example to introduce.
+Here to import [vue-count-to](https://github.com/adempiere/vue-countTo) as an example to introduce.
 
 ## Install dependence
 
@@ -54,7 +54,7 @@ export default {
 </script>
 ```
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/8b95fac0-6691-4ad6-ba6c-e5d84527da06.gif)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/8b95fac0-6691-4ad6-ba6c-e5d84527da06.gif)
 
 <br/>
 

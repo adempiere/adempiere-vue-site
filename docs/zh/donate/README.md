@@ -6,7 +6,7 @@ sidebar: false
 如果你觉得这个项目帮助到了你，你可以帮作者买一杯果汁表示鼓励 :tropical_drink:
 :::
 
-![donate](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/bd273f0d-83a0-4ef2-92e1-9ac8ed3746b9.png)
+![donate](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/bd273f0d-83a0-4ef2-92e1-9ac8ed3746b9.png)
 
 ## 微信打赏
 
@@ -14,11 +14,11 @@ sidebar: false
 或者你可以用微信，打赏作者一杯可乐
 :::
 
-<img class="no-margin" src="https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/5390879f-b544-468d-846b-ea5061cf4863.jpeg"  height="300px" >
+<img class="no-margin" src="https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/5390879f-b544-468d-846b-ea5061cf4863.jpeg"  height="300px" >
 
 ## 购买贴纸
 
-你也可以通过 购买[官方授权的贴纸](https://smallsticker.com/product/vue-element-admin) 的方式来支持 vue-element-admin - 每售出一张贴纸，本项目将获得 2 元的捐赠。
+你也可以通过 购买[官方授权的贴纸](https://smallsticker.com/product/adempiere-vue) 的方式来支持 adempiere-vue - 每售出一张贴纸，本项目将获得 2 元的捐赠。
 
 ## Or
 
@@ -37,7 +37,7 @@ Open source projects consume a lot of my rest time. And at the end of the day we
 ## 字节跳动招聘（长期有效，急缺人）
 
 本人目前在字节跳动担任前端工程师，坐标：上海 Data-广告系统-广告创意中心。
-个人 Github: [https://github.com/PanJiaChen](https://github.com/PanJiaChen)
+个人 Github: [https://github.com/adempiere](https://github.com/adempiere)
 
 项目组目前非常缺前端、后端、测试。欢迎有兴趣的同学找我内推。
 

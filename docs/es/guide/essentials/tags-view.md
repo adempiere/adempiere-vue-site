@@ -59,7 +59,7 @@ Para más detalles, ver [issue](https://github.com/vuejs/vue/issues/6938#issueco
 Las soluciones actualmente en caché no son adecuadas para ciertos servicios, como la página de detalles del artículo, por ejemplo `/article/1`, `/article/2`, sus rutas son diferentes pero los componentes correspondientes son los mismos, por lo que el nombre de su componente es igual, como se mencionó anteriormente, con la inclusión de `keep-alive` solo se puede almacenar en caché basándose en el nombre del componente, por lo que esto es un problema. Actualmente hay dos soluciones:
 
 - En lugar de utilizar la inclusión de keep-alive, este almacenará directamente todos los componentes en caché. De esta manera, se ayudara a la situación antes mencionada.
-  En [@/layout/components/AppMain.vue](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/layout/components/AppMain.vue) elimina el código relacionado con `include`. Por supuesto, usar keep-alive directamente también tiene desventajas. No puedes eliminar dinámicamente la caché. Solo puedes ayudar estableciendo un límite máximo de instancia de caché.
+  En [@/layout/components/AppMain.vue](https://github.com/adempiere/adempiere-vue/blob/master/src/layout/components/AppMain.vue) elimina el código relacionado con `include`. Por supuesto, usar keep-alive directamente también tiene desventajas. No puedes eliminar dinámicamente la caché. Solo puedes ayudar estableciendo un límite máximo de instancia de caché.
   [issue](https://github.com/vuejs/vue/issues/6509)
 
 - Utiliza un esquema de caché del navegador como localStorage, para controlar la caché.

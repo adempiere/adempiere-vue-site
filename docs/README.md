@@ -24,7 +24,7 @@ footer: MIT Licensed | Copyright © 2017-present PanJiaChen
 
 ```bash
 # clone the project
-git clone https://github.com/PanJiaChen/vue-element-admin.git
+git clone https://github.com/adempiere/adempiere-vue.git
 
 # install dependency
 npm install

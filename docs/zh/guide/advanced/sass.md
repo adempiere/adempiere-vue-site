@@ -2,7 +2,7 @@
 
 在 `v4.3.0`之前本项目都是基于`node-sass`进行构建的，但`node-sass`底层依赖 [libsass](https://github.com/sass/libsass)，导致很多用户安装的特别的困难，尤其是 windows 用户，它强制用户在`windows`环境中必须安装`python2`和`Visual Studio`才能编译成功。
 
-所以为了解决这个问题，本项目在 [v4.3.0](https://github.com/PanJiaChen/vue-element-admin/pull/3040)修改为`dart-sass`进行构建，它能在保证性能的前提下大大简化用户的安装成本。通过这个 [issue](https://github.com/PanJiaChen/vue-element-admin/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)下面相关的评论就可以知道，安装 `node-sass` 是多么麻烦的一件事。
+所以为了解决这个问题，本项目在 [v4.3.0](https://github.com/adempiere/adempiere-vue/pull/3040)修改为`dart-sass`进行构建，它能在保证性能的前提下大大简化用户的安装成本。通过这个 [issue](https://github.com/adempiere/adempiere-vue/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc)下面相关的评论就可以知道，安装 `node-sass` 是多么麻烦的一件事。
 
 这里选择使用`dart-sass`还有一个更主要的原因，`sass`官方已经将`dart-sass`作为未来主要的的开发方向了，有任何新功能它都是会优先支持的，而且它已经在社区里稳定运行了很长的一段时间，基本没有什么坑了。`dart-sass`之所以容易安装，主要是因为它会被编译成纯 js，这样就可以直接在的 node 环境中使用。虽然这样它的运行速度会比基于 [libsass](https://github.com/sass/libsass)的慢一些些，但这些速度的差异几乎可以忽略不计。整个社区现在都在拥抱`dart-sass`，我们没有理由拒绝！而且它的确大大简化了用户的安装成本。
 
@@ -22,7 +22,7 @@ npm uninstall node-sass
 npm install sass -S -D
 ```
 
-具体可见该： [Pull Request](https://github.com/PanJiaChen/vue-element-admin/pull/3040)
+具体可见该： [Pull Request](https://github.com/adempiere/adempiere-vue/pull/3040)
 
 ## 不兼容
 

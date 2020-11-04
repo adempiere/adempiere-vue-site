@@ -4,9 +4,9 @@
 提问之前，请先查阅下面的常见问题。
 :::
 
-## vue-element-admin 和 vue-admin-template 有什么区别？
+## adempiere-vue 和 vue-admin-template 有什么区别？
 
-vue-element-admin 是一个后台的集成方案，它囊括了很多的功能和组件，并不适合作为基础模板来进行二次开发。
+adempiere-vue 是一个后台的集成方案，它囊括了很多的功能和组件，并不适合作为基础模板来进行二次开发。
 vue-admin-template 则是一个后台的基础模板脚手架，适合在它的基础上进行二次开发。
 
 <br/>
@@ -69,9 +69,9 @@ npm install --registry=https://registry.npm.taobao.org
 
 请查看下面相关 issue：
 
-[issues/25](https://github.com/PanJiaChen/vue-element-admin/issues/25)
+[issues/25](https://github.com/adempiere/adempiere-vue/issues/25)
 
-[issues/24](https://github.com/PanJiaChen/vue-element-admin/issues/24)
+[issues/24](https://github.com/adempiere/adempiere-vue/issues/24)
 
 <br/>
 
@@ -85,7 +85,7 @@ npm install --registry=https://registry.npm.taobao.org
 
 将路由表配置存储在后端方案
 
-相关 issue：[issues/293](https://github.com/PanJiaChen/vue-element-admin/issues/293)
+相关 issue：[issues/293](https://github.com/adempiere/adempiere-vue/issues/293)
 <br/>
 
 ## 浏览器兼容性问题

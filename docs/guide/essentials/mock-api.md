@@ -12,7 +12,7 @@ In my company project, the data is usually simulated by the backend using [swagg
 
 ## Easy-mock
 
-[vue-admin-template](https://github.com/PanJiaChen/vue-admin-template) previously used [easy-mock](https://easy-mock.com/login) to simulate data.
+[vue-admin-template](https://github.com/adempiere/vue-admin-template) previously used [easy-mock](https://easy-mock.com/login) to simulate data.
 It is a pure front-end visualization and can quickly generate persistence services for analog data. Very easy to use and can also be combined with `swagger`, support for cross-domain, whether it is a team or a personal project is worth a try.
 
 [Online Demo](https://easy-mock.com/)
@@ -23,23 +23,23 @@ The online version of `vue-admin-template` is no longer using `easy-mock`. Becau
 
 ## Mockjs
 
-Since [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) is a pure front-end personal project, all data is [mockjs] (https://github.com/ Nuysoft/Mock) Simulation generation. Its principle is: Intercept all requests and proxy to the local, and then mock data, so you will find that no requests are issued in `network`.
+Since [adempiere-vue](https://github.com/adempiere/adempiere-vue) is a pure front-end personal project, all data is [mockjs] (https://github.com/ Nuysoft/Mock) Simulation generation. Its principle is: Intercept all requests and proxy to the local, and then mock data, so you will find that no requests are issued in `network`.
 
-But its biggest problem is its implementation mechanism. It overrides the browser's `XMLHttpRequest` object to intercept all requests and proxy to the local. In most cases it is quite convenient to use, but because it rewrites the `XMLHttpRequest` object, so for example, the `progress` method, or some third-party libraries that rely on `XMLHttpRequest` will be incompatible with it. Looking at my project's [issues](https://github.com/PanJiaChen/vue-element-admin/issues?utf8=%E2%9C%93&q=mock), you will know how many people have problems.
+But its biggest problem is its implementation mechanism. It overrides the browser's `XMLHttpRequest` object to intercept all requests and proxy to the local. In most cases it is quite convenient to use, but because it rewrites the `XMLHttpRequest` object, so for example, the `progress` method, or some third-party libraries that rely on `XMLHttpRequest` will be incompatible with it. Looking at my project's [issues](https://github.com/adempiere/adempiere-vue/issues?utf8=%E2%9C%93&q=mock), you will know how many people have problems.
 
-It also has a problem because it is data that is simulated locally and does not actually take any network requests. Therefore, local debugging is very troublesome and can only be debugged by `console.log`. Take the example of `vue-element-admin`. If you want to find out what data is returned by the `getInfo()` api, you can only know it by looking at the source code or manually `Debug`.
+It also has a problem because it is data that is simulated locally and does not actually take any network requests. Therefore, local debugging is very troublesome and can only be debugged by `console.log`. Take the example of `adempiere-vue`. If you want to find out what data is returned by the `getInfo()` api, you can only know it by looking at the source code or manually `Debug`.
 
 ## New way <Badge text="v4.0.0+"/>
 
 After the `v4.0` version, a `mock-server` will be launched locally to simulate the data, and the online environment will continue to use `mockjs` for simulation.(Because this project is a pure front-end project, you can also build an online server to provide data.)
 
-The advantage of this way is to solve the previous pain points while preserving the advantages of `mockjs`. Since our mock is implemented entirely based on `webpack-dev-serve`, `mock-server` will start automatically when you start the project, and it will also pass [chokidar](https://github.com/paulmillr/chokidar) to observe the changes in the contents of the `mock` folder. When a change occurs, the previously registered `mock-api` interface is cleared and the new interface is dynamically remounted to support hot updates. If you are interested, you can look at the code [mock-server.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/mock/mock-server.js). Since it is a real `server`, you can clearly know the data structure returned by the interface through `network` of Chrome. At the same time, it solves the problem that the previous `mockjs` will rewrite the `XMLHttpRequest` object, which causes many third-party libraries to fail.
+The advantage of this way is to solve the previous pain points while preserving the advantages of `mockjs`. Since our mock is implemented entirely based on `webpack-dev-serve`, `mock-server` will start automatically when you start the project, and it will also pass [chokidar](https://github.com/paulmillr/chokidar) to observe the changes in the contents of the `mock` folder. When a change occurs, the previously registered `mock-api` interface is cleared and the new interface is dynamically remounted to support hot updates. If you are interested, you can look at the code [mock-server.js](https://github.com/adempiere/adempiere-vue/blob/master/mock/mock-server.js). Since it is a real `server`, you can clearly know the data structure returned by the interface through `network` of Chrome. At the same time, it solves the problem that the previous `mockjs` will rewrite the `XMLHttpRequest` object, which causes many third-party libraries to fail.
 
-All requests for this project are sent via the packaged [request.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/utils/request.js) by reading The source code can find that all requests are set to a `baseURL`, and this `baseURL` is dynamically set by reading the `process.env.VUE_APP_BASE_API` environment variable, so that we can use different environments for different environments. Api` address
+All requests for this project are sent via the packaged [request.js](https://github.com/adempiere/adempiere-vue/blob/master/src/utils/request.js) by reading The source code can find that all requests are set to a `baseURL`, and this `baseURL` is dynamically set by reading the `process.env.VUE_APP_BASE_API` environment variable, so that we can use different environments for different environments. Api` address
 
 ## Remove
 
-If you don't want to use `mock-server`, just the `after` Middleware of `webpack-dev-server` from [vue.config.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/vue.config.js).
+If you don't want to use `mock-server`, just the `after` Middleware of `webpack-dev-server` from [vue.config.js](https://github.com/adempiere/adempiere-vue/blob/master/vue.config.js).
 
 By default, local requests are proxy to `http://localhost:${port}/mock`, and you can modify `proxy` if you want to adjust to your own mock address.
 
@@ -64,7 +64,7 @@ after: require('./mock/mock-server.js')
 
 If you want to add mock data, just find the `mock` file in the root folder, add the corresponding route, intercept it and simulate the data.
 
-For example, I need to add an api to get the number of comments below an article in [src/api/article](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/api/article.js) through `fetchComments`. First create a new api:
+For example, I need to add an api to get the number of comments below an article in [src/api/article](https://github.com/adempiere/adempiere-vue/blob/master/src/api/article.js) through `fetchComments`. First create a new api:
 
 ```js
 export function fetchComments(id) {
@@ -75,7 +75,7 @@ export function fetchComments(id) {
 }
 ```
 
-After declaring the api, we need to find the corresponding mock folder [mock/article.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/mock/article.js), below Create a mock api that intercepts routes.
+After declaring the api, we need to find the corresponding mock folder [mock/article.js](https://github.com/adempiere/adempiere-vue/blob/master/mock/article.js), below Create a mock api that intercepts routes.
 
 **Please note that the mock interception is based on routing. Please make sure that the mock data path will match your api route path(support regular)**
 
@@ -105,7 +105,7 @@ After declaring the api, we need to find the corresponding mock folder [mock/art
 
 The most common operation is: You have simulated some data locally, and after the backend completes the api, it gradually replaces the api of the original mock.
 
-Let's take the `getRoles` api in [src/api/role.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/api/role.js) as an example. It was originally mocked in [mock/role/index.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/mock/role/index.js). Now we need to switch it to real backend data, as long as it is in [mock/role/index.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/mock/role/index.js) Find the corresponding route, then delete it. At this time you can view the real data in `network`.
+Let's take the `getRoles` api in [src/api/role.js](https://github.com/adempiere/adempiere-vue/blob/master/src/api/role.js) as an example. It was originally mocked in [mock/role/index.js](https://github.com/adempiere/adempiere-vue/blob/master/mock/role/index.js). Now we need to switch it to real backend data, as long as it is in [mock/role/index.js](https://github.com/adempiere/adempiere-vue/blob/master/mock/role/index.js) Find the corresponding route, then delete it. At this time you can view the real data in `network`.
 
 ```js
 // The declared in the api
@@ -131,22 +131,22 @@ export function getRoles() {
 
 ## Multiple servers
 
-Currently the project only starts a `mock-server`, of course you can also have your own other `mock-server` or proxy interface. Some api can take this service, others can take another service. Just set them to a different `baseURL`. [@/utils/request.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/utils/request.js)
+Currently the project only starts a `mock-server`, of course you can also have your own other `mock-server` or proxy interface. Some api can take this service, others can take another service. Just set them to a different `baseURL`. [@/utils/request.js](https://github.com/adempiere/adempiere-vue/blob/master/src/utils/request.js)
 
-Then configure multiple `proxy` according to the set url rules in [vue.config.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/vue.config.js).
+Then configure multiple `proxy` according to the set url rules in [vue.config.js](https://github.com/adempiere/adempiere-vue/blob/master/vue.config.js).
 
 [相关文档](https://webpack.docschina.org/configuration/dev-server/#devserver-proxy)
 
 ## Enable pure front end Mock
 
-Now in [mock/index.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/mock/index.js#L19) also encapsulates a pure front-end mock method, you only Need to be in [src/main.js](https://github.com/PanJiaChen/vue-element-admin/tree/master/src):
+Now in [mock/index.js](https://github.com/adempiere/adempiere-vue/blob/master/mock/index.js#L19) also encapsulates a pure front-end mock method, you only Need to be in [src/main.js](https://github.com/adempiere/adempiere-vue/tree/master/src):
 
 ```js
 import { mockXHR } from '../mock'
 mockXHR()
 ```
 
-This will become pure front-end mock data and the same as the mock way before the `v4.0` version, the principle is as above. The online [demo](https://panjiachen.github.io/vue-element-admin) that you are currently seeing is just that way.
+This will become pure front-end mock data and the same as the mock way before the `v4.0` version, the principle is as above. The online [demo](https://adempiere.github.io/adempiere-vue) that you are currently seeing is just that way.
 
 ## Switch local and online Mock data
 
@@ -175,7 +175,7 @@ VUE_APP_BASE_API = '/prod-api' #Inject the root path of the production api
 ```
 
 Then create an `axios` instance based on the environment variable to have a different `baseURL`.
-[@/utils/request.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/utils/request.js)
+[@/utils/request.js](https://github.com/adempiere/adempiere-vue/blob/master/src/utils/request.js)
 
 ```js
 // create an axios instance

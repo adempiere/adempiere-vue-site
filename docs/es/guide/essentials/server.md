@@ -2,7 +2,7 @@
 
 ## Flujo de solicitudes de front-end
 
-En `vue-element-admin`, una interfaz de usuario completa interactúa con el flujo de procesamiento del lado del servidor de la siguiente manera:
+En `adempiere-vue`, una interfaz de usuario completa interactúa con el flujo de procesamiento del lado del servidor de la siguiente manera:
 
 1.  Interacción de componentes UI;
 2.  Llamar a la función de solicitud de servicio API de gestión unificada;
@@ -22,7 +22,7 @@ api/
 
 ## request.js
 
-`@/utils/request.js` se basa en [axios](https://github.com/axios/axios), para facilitar el manejo uniforme de POST, GET y otros parámetros de solicitud, encabezados de solicitud y mensajes de error. Para ver mas específico vea [request.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/utils/request.js).
+`@/utils/request.js` se basa en [axios](https://github.com/axios/axios), para facilitar el manejo uniforme de POST, GET y otros parámetros de solicitud, encabezados de solicitud y mensajes de error. Para ver mas específico vea [request.js](https://github.com/adempiere/adempiere-vue/blob/master/src/utils/request.js).
 
 Encapsula el 'interceptor de solicitud' global, el 'interceptor de respuesta', el 'manejo unificado de errores', el 'tiempo de espera unificado, la configuración de baseURL, etc.'
 
@@ -68,7 +68,7 @@ VUE_APP_BASE_API = '/dev-api' #Inyecta la ruta raíz de la api
 VUE_APP_BASE_API2 = '/dev-api2' #Inyecta la ruta raíz de la api
 ```
 
-Luego crea una instancia `axios` basada en la variable de entorno, dándole una `baseURL` [@/utils/request.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/utils/request.js) diferente.
+Luego crea una instancia `axios` basada en la variable de entorno, dándole una `baseURL` [@/utils/request.js](https://github.com/adempiere/adempiere-vue/blob/master/src/utils/request.js) diferente.
 
 ```js
 // crear una instancia de axios

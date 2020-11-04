@@ -1,6 +1,6 @@
 ## 环境变量
 
-`vue-element-admin` 4.0 之后是基于 `vue-cli`来进行构建，所以所有的环境变量配置都是基于`vue-cli`来实现和控制的。
+`adempiere-vue` 4.0 之后是基于 `vue-cli`来进行构建，所以所有的环境变量配置都是基于`vue-cli`来实现和控制的。
 
 [官方文档](https://cli.vuejs.org/zh/guide/mode-and-env.html)
 
@@ -38,4 +38,4 @@ console.log(process.env.VUE_APP_xxxx)
 
 你可以通过`process.env.NODE_ENV`来执行判断环境，来设置不同的参数。
 
-具体代码可借鉴[vue.config.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/vue.config.js)
+具体代码可借鉴[vue.config.js](https://github.com/adempiere/adempiere-vue/blob/master/vue.config.js)

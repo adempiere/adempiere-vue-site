@@ -108,13 +108,13 @@ The project sidebar is mainly based on the `el-menu` of element-ui.
 
 Also introduced in the front, the sidebar is generated dynamically by reading the route and combined with the permission judge, but also need to support the infinite nesting of routes, so here is also used to the recursive components.
 
-> Code: [@/layout/components/Sidebar](https://github.com/PanJiaChen/vue-element-admin/tree/master/src/layout/components/Sidebar)
+> Code: [@/layout/components/Sidebar](https://github.com/adempiere/adempiere-vue/tree/master/src/layout/components/Sidebar)
 
-This also modify many default sidebar styles of `element-ui`. All css can be found in [@/styles/sidebar.scss](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/styles/sidebar.scss) and can be modified to suit your needs.
+This also modify many default sidebar styles of `element-ui`. All css can be found in [@/styles/sidebar.scss](https://github.com/adempiere/adempiere-vue/blob/master/src/styles/sidebar.scss) and can be modified to suit your needs.
 
 **Here need to pay attention**. The general sidebar has two forms, `submenu` and`el-menu-item`. One is a nested submenu, the other is a direct link. As shown below:
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/e94739d6-d701-45c8-8c6e-0f4bb10c3b46.png)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/e94739d6-d701-45c8-8c6e-0f4bb10c3b46.png)
 
 The sidebar has already helped you to make a judgment. When you route a children below the declaration of more than >1 routes, it will automatically become a nested mode. If the sub-route is exactly equal to one, the sub-route is displayed as a root route in the sidebar by default. If you do not want to, you can disable this feature by setting `alwaysShow: true` in the root route. Such as:
 
@@ -148,12 +148,12 @@ The sidebar has already helped you to make a judgment. When you route a children
 ```
 
 ::: tip unique-opened
-You can set `unique-opened` in [Sidebar/index.vue](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/layout/components/Sidebar/index.vue). To control the sidebar, whether to keep only one submenu expanded.
+You can set `unique-opened` in [Sidebar/index.vue](https://github.com/adempiere/adempiere-vue/blob/master/src/layout/components/Sidebar/index.vue). To control the sidebar, whether to keep only one submenu expanded.
 :::
 
 ## Nested Routes
 
-If you have a nested Route, such as [@/views/nested](https://github.com/PanJiaChen/vue-element-admin/tree/master/src/views/nested),
+If you have a nested Route, such as [@/views/nested](https://github.com/adempiere/adempiere-vue/tree/master/src/views/nested),
 **Don't forget to manually add an `< router-view >` to the root file of the secondary directory**.
 
 ```html
@@ -166,11 +166,11 @@ If you have a nested Route, such as [@/views/nested](https://github.com/PanJiaCh
 </template>
 ```
 
-Such as: [@/views/nested/menu1/index.vue](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/views/nested/menu1/index.vue).
+Such as: [@/views/nested/menu1/index.vue](https://github.com/adempiere/adempiere-vue/blob/master/src/views/nested/menu1/index.vue).
 
 **Note:** As many `<router-view>` as the level of routes nested.
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/9459de62-64d0-4819-9730-daf3f9889018.png)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/9459de62-64d0-4819-9730-daf3f9889018.png)
 
 <br/>
 
@@ -178,7 +178,7 @@ Such as: [@/views/nested/menu1/index.vue](https://github.com/PanJiaChen/vue-elem
 
 Before using the development model of spa(single page application), each time the user clicks the sidebar will request this page again, the user gradually developed the habit of clicking the current route in the sidebar to refresh the view. But now the spa is not the same, the user clicks the currently highlighted route and does not refresh the view, because the vue-router will intercept your routing, it determines your url does not change, so it will not trigger any hook or view changes.[Related issue](https://github.com/vuejs/vue-router/issues/296), the community has also heated discussions on the issue.
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/5d0b0391-ea6a-45f2-943e-aff5dbe74d12.png)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/5d0b0391-ea6a-45f2-943e-aff5dbe74d12.png)
 
 `yyx990803`also said that he wanted to add a way to brighten the view, but later he changed his mind again/(ㄒ o ㄒ)/~~ But demand is here, what should we do? He said it would not trigger anything without changing the current URL, so can I force the trigger? The hack is simple. By changing the url query to trigger the view changes。We listen to each link's click event on the sidebar, each click will push a different query for the router to ensure that the view is refreshed.
 
@@ -203,7 +203,7 @@ You can know from the previous issue that there are many other options. In my co
 
 **Example**
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/0dd7f78b-0fb5-4c7d-8236-cee78f960984.jpg)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/0dd7f78b-0fb5-4c7d-8236-cee78f960984.jpg)
 
 Click on the global size switch button shown in the image and you will see that the page of `app-main` has been refreshed. It uses the method of redirecting to the `Redirect` page and then redirecting back to the original page.
 
@@ -220,7 +220,7 @@ The `redirect` page is redirected back to the original page
 
 ```js
 // redirect.vue
-// https://github.com/PanJiaChen/vue-element-admin/blob/master/src/views/redirect/index.vue
+// https://github.com/adempiere/adempiere-vue/blob/master/src/views/redirect/index.vue
 export default {
   beforeCreate() {
     const { params, query } = this.$route
@@ -239,9 +239,9 @@ export default {
 
 This project also packages a breadcrumb navigation, which is also dynamically generated by the watch $route change. It is the same with the menu, you can also config it in the routing. You can also add some custom attributes to your business needs in route.meta attr. For example, you can declare `breadcrumb:false` in the route so that it is not displayed in breadcrumb.
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/4c60b3fc-febd-4e22-9150-724dcbd25a8e.gif)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/4c60b3fc-febd-4e22-9150-724dcbd25a8e.gif)
 
-> Corresponding code: [@/components/Breadcrumb](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/components/Breadcrumb/index.vue)
+> Corresponding code: [@/components/Breadcrumb](https://github.com/adempiere/adempiere-vue/blob/master/src/components/Breadcrumb/index.vue)
 
 ## Sidebar scroll problem
 
@@ -261,7 +261,7 @@ Second, in the case of sidebar collapses, limited to `menu` of`element-ui`, can 
 So the current version uses `el-scrollbar` to handle the sidebar scrolling problem.
 
 ::: tip Code
-[@/layout/components/Sidebar](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/layout/components/Sidebar/index.vue)
+[@/layout/components/Sidebar](https://github.com/adempiere/adempiere-vue/blob/master/src/layout/components/Sidebar/index.vue)
 :::
 
 ## Sidebar external-link <Badge text="v3.8.2+"/>
@@ -276,7 +276,7 @@ E.g.
   "component": Layout,
   "children": [
     {
-      "path": "https://github.com/PanJiaChen/vue-element-admin",
+      "path": "https://github.com/adempiere/adempiere-vue",
       "meta": { "title": "externalLink", "icon": "link" }
     }
   ]
@@ -289,7 +289,7 @@ In some scenarios, users need to expand some of the `sub-menu` in the sidebar by
 
 <img :src="$withBase('/images/default-openeds.jpg')" alt="default-openeds.jpg" width="250px">
 
-Can be set through `default-openeds`, first find [Sidebar Code](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/layout/components/Sidebar/index.vue)
+Can be set through `default-openeds`, first find [Sidebar Code](https://github.com/adempiere/adempiere-vue/blob/master/src/layout/components/Sidebar/index.vue)
 
 ```html
  <el-menu

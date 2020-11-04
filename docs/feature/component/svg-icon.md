@@ -6,7 +6,7 @@ sidebarDepth: 3
 
 Global icon component: Svg Icon.
 
-By default, the Svg Icon component is registered in [@/icons](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/icons/index.js#L6), and can be used anywhere in the project. All icons can be found in [@/icons/svg](https://github.com/PanJiaChen/vue-element-admin/tree/master/src/icons/svg). You can add or remove the icon by yourself, and the icon will be imported automatically without manual operation.
+By default, the Svg Icon component is registered in [@/icons](https://github.com/adempiere/adempiere-vue/blob/master/src/icons/index.js#L6), and can be used anywhere in the project. All icons can be found in [@/icons/svg](https://github.com/adempiere/adempiere-vue/tree/master/src/icons/svg). You can add or remove the icon by yourself, and the icon will be imported automatically without manual operation.
 
 ## Usage
 
@@ -34,5 +34,5 @@ If you are downloading an icon from [iconfont](https://www.iconfont.cn/), rememb
 The icons used in this project are all 128\*128 size specifications.
 
 :::tip
-If you encounter the wrong color of the icon, you can refer to the [issue](https://github.com/PanJiaChen/vue-element-admin/issues/330) for modification
+If you encounter the wrong color of the icon, you can refer to the [issue](https://github.com/adempiere/adempiere-vue/issues/330) for modification
 :::

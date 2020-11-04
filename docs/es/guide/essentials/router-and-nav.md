@@ -108,13 +108,13 @@ La barra lateral del proyecto se basa principalmente en `el-menu` de element-ui.
 
 Se introdujo en el front, la barra lateral se genera dinámicamente al leer la ruta y se combina con el juez de permisos, pero también debe soportar la anidación infinita de rutas, por lo que aquí también se usa para los componentes recursivos.
 
-> Código: [@/layout/components/Sidebar](https://github.com/PanJiaChen/vue-element-admin/tree/master/src/layout/components/Sidebar)
+> Código: [@/layout/components/Sidebar](https://github.com/adempiere/adempiere-vue/tree/master/src/layout/components/Sidebar)
 
-Es posible modificar el estilo predeterminado de la barra lateral de `element-ui`. Todo el CSS lo puedes encontrar en [@/styles/sidebar.scss](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/styles/sidebar.scss) y modificarlo para satisfacer tus necesidades.
+Es posible modificar el estilo predeterminado de la barra lateral de `element-ui`. Todo el CSS lo puedes encontrar en [@/styles/sidebar.scss](https://github.com/adempiere/adempiere-vue/blob/master/src/styles/sidebar.scss) y modificarlo para satisfacer tus necesidades.
 
 **Aquí hay que prestar atención**. La barra lateral general tiene dos formas, `submenu` y `el-menu-item`. Uno es un submenú anidado, el otro es un enlace directo. Como se muestra abajo:
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/e94739d6-d701-45c8-8c6e-0f4bb10c3b46.png)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/e94739d6-d701-45c8-8c6e-0f4bb10c3b46.png)
 
 La barra lateral ya te ha ayudado a hacer un juicio. Cuando agregas más de un hijo a un elemento, automáticamente se convierte en modo anidado. Si la ruta hijo es exactamente igual a 1, esta se muestra como ruta raíz en la barra lateral de forma predeterminada. Si no quieres que esto suceda, puedes desactivar esta función configurando `alwaysShow: true` en la ruta raíz. Como:
 
@@ -148,12 +148,12 @@ La barra lateral ya te ha ayudado a hacer un juicio. Cuando agregas más de un h
 ```
 
 ::: tip unique-opened
-Puedes configurar `unique-opened` en [Sidebar/index.vue](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/layout/components/Sidebar/index.vue). Para controlar la barra lateral, si deseas mantener solo un submenú expandido.
+Puedes configurar `unique-opened` en [Sidebar/index.vue](https://github.com/adempiere/adempiere-vue/blob/master/src/layout/components/Sidebar/index.vue). Para controlar la barra lateral, si deseas mantener solo un submenú expandido.
 :::
 
 ## Rutas anidadas
 
-Si tienes una ruta anidada, como [@/views/nested](https://github.com/PanJiaChen/vue-element-admin/tree/master/src/views/nested),
+Si tienes una ruta anidada, como [@/views/nested](https://github.com/adempiere/adempiere-vue/tree/master/src/views/nested),
 **No olvides agregar manualmente `<router-view>` al archivo raíz del directorio secundario**.
 
 ```html
@@ -166,11 +166,11 @@ Si tienes una ruta anidada, como [@/views/nested](https://github.com/PanJiaChen/
 </template>
 ```
 
-Tal como: [@/views/nested/menu1/index.vue](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/views/nested/menu1/index.vue).
+Tal como: [@/views/nested/menu1/index.vue](https://github.com/adempiere/adempiere-vue/blob/master/src/views/nested/menu1/index.vue).
 
 **NOTA:** Tantos `<router-view>` como nivel de rutas anidadas.
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/9459de62-64d0-4819-9730-daf3f9889018.png)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/9459de62-64d0-4819-9730-daf3f9889018.png)
 
 <br/>
 
@@ -178,7 +178,7 @@ Tal como: [@/views/nested/menu1/index.vue](https://github.com/PanJiaChen/vue-ele
 
 Antes de utilizar el modelo de desarrollo spa (aplicación de página única), cada vez que el usuario hace clic en la barra lateral solicitará nuevamente esta página, el usuario gradualmente desarrolló el hábito de hacer clic en la ruta actual en la barra lateral para actualizar la vista. Pero ahora en el spa no es lo mismo, el usuario hace clic en la ruta resaltada actualmente y no actualiza la vista, porque el vue-router interceptará tu ruta, determina que la url no cambia, por lo que no activará ningún hook o cambios en la vista. [Problema relacionado](https://github.com/vuejs/vue-router/issues/296), la comunidad también ha discutido sobre el tema.
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/5d0b0391-ea6a-45f2-943e-aff5dbe74d12.png)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/5d0b0391-ea6a-45f2-943e-aff5dbe74d12.png)
 
 `yyx990803` también dijo que quería agregar una forma de actualizar la vista, y luego cambió de opinión nuevamente /(ㄒ o ㄒ)/~~ Pero la cuestión es la siguiente, ¿qué debemos hacer? Dijo que no activaría nada sin cambiar la URL actual, así que ¿puedo forzar al activador? El truco es simple. Al cambiar la consulta de la URL para activar los cambios de vista: escuchamos el evento clic de cada enlace en la barra lateral, cada clic realizará una consulta diferente en el enrutador para garantizar que la vista se actualice.
 
@@ -203,7 +203,7 @@ Puedes saber del problema anterior que hay muchas otras opciones. En el proyecto
 
 **Ejemplo**
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/0dd7f78b-0fb5-4c7d-8236-cee78f960984.jpg)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/0dd7f78b-0fb5-4c7d-8236-cee78f960984.jpg)
 
 Haz clic en el botón de cambio de tamaño global que se muestra en la imagen y verás que la página `app-main` se ha actualizado. Se utiliza el método de redireccionamiento a la página `Redirect` y luego redirecciona de nuevo a la página original.
 
@@ -220,7 +220,7 @@ La página `redirect` se redirige de nuevo a la página original
 
 ```js
 // redirect.vue
-// https://github.com/PanJiaChen/vue-element-admin/blob/master/src/views/redirect/index.vue
+// https://github.com/adempiere/adempiere-vue/blob/master/src/views/redirect/index.vue
 export default {
   beforeCreate() {
     const { params, query } = this.$route
@@ -239,9 +239,9 @@ export default {
 
 Este proyecto también incluye una navegación con breadcrumb, que también se genera dinámicamente por el cambio de ruta al observar $route. Es lo mismo con el menú, también puedes configurarlo en el enrutamiento y agregar algunos atributos personalizados a las necesidades de tu negocio en route.meta attr. Por ejemplo, puedes declarar `breadcrumb:false` en la ruta para que no se muestre en la sección breadcrumb.
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/4c60b3fc-febd-4e22-9150-724dcbd25a8e.gif)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/4c60b3fc-febd-4e22-9150-724dcbd25a8e.gif)
 
-> Código correspondiente: [@/components/Breadcrumb](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/components/Breadcrumb/index.vue)
+> Código correspondiente: [@/components/Breadcrumb](https://github.com/adempiere/adempiere-vue/blob/master/src/components/Breadcrumb/index.vue)
 
 ## Problema de desplazamiento de la barra lateral
 
@@ -261,7 +261,7 @@ En segundo lugar, en el caso de colapsos de la barra lateral, limitados al `menu
 Entonces, la versión actual usa `el-scrollbar` para encargarse del problema de desplazamiento de la barra lateral.
 
 ::: tip Código
-[@/layout/components/Sidebar](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/layout/components/Sidebar/index.vue)
+[@/layout/components/Sidebar](https://github.com/adempiere/adempiere-vue/blob/master/src/layout/components/Sidebar/index.vue)
 :::
 
 ## Enlace externo en la barra lateral <Badge text="v3.8.2+"/>
@@ -276,7 +276,7 @@ P.ej.
   "component": Layout,
   "children": [
     {
-      "path": "https://github.com/PanJiaChen/vue-element-admin",
+      "path": "https://github.com/adempiere/adempiere-vue",
       "meta": { "title": "externalLink", "icon": "link" }
     }
   ]
@@ -289,7 +289,7 @@ In some scenarios, users need to expand some of the `sub-menu` in the sidebar by
 
 <img :src="$withBase('/images/default-openeds.jpg')" alt="default-openeds.jpg" width="250px">
 
-Can be set through `default-openeds`, first find [Sidebar Code](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/layout/components/Sidebar/index.vue)
+Can be set through `default-openeds`, first find [Sidebar Code](https://github.com/adempiere/adempiere-vue/blob/master/src/layout/components/Sidebar/index.vue)
 
 ```html
  <el-menu

@@ -38,7 +38,7 @@
 
 <Badge text="v4.2.0+"/> 之后改用了异步加载 CDN 的引入方式。
 
-如果想修改 cdn 地址或者 tinymce 的版本只需在 [@/components/Tinymce](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/components/Tinymce/index.vue) 中找到 tinymce 的 cdn 地址进行修改就可以了。它会通过`dynamicLoadScript`自动注入的 `index.html` 中。
+如果想修改 cdn 地址或者 tinymce 的版本只需在 [@/components/Tinymce](https://github.com/adempiere/adempiere-vue/blob/master/src/components/Tinymce/index.vue) 中找到 tinymce 的 cdn 地址进行修改就可以了。它会通过`dynamicLoadScript`自动注入的 `index.html` 中。
 
 > 由于目前使用 npm 安装 `Tinymce` 方法比较复杂而且还有一些问题(日后可能会采用该模式)且会大大增加编译的时间所以暂时不准备采用。:space_invader:
 
@@ -47,7 +47,7 @@
 
 可以通过 `this.refs.xxx.setContent()` 手动来设置。
 
-源码也很简单，有任何别的需求都可以在 [@/components/Tinymce](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/components/Tinymce) 中自行修改。
+源码也很简单，有任何别的需求都可以在 [@/components/Tinymce](https://github.com/adempiere/adempiere-vue/blob/master/src/components/Tinymce) 中自行修改。
 
 ```html
 <tinymce :height="300" v-model="content" id='tinymce'></tinymce>

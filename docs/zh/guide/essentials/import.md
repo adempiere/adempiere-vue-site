@@ -1,6 +1,6 @@
 # 引入外部模块
 
-除了 element-ui 组件以及脚手架内置的业务组件，有时我们还需要引入其他外部组件，这里以引入 [vue-count-to](https://github.com/PanJiaChen/vue-countTo) 为例进行介绍。
+除了 element-ui 组件以及脚手架内置的业务组件，有时我们还需要引入其他外部组件，这里以引入 [vue-count-to](https://github.com/adempiere/vue-countTo) 为例进行介绍。
 
 ## 引入依赖
 
@@ -52,7 +52,7 @@ export default {
 </script>
 ```
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/8b95fac0-6691-4ad6-ba6c-e5d84527da06.gif)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/8b95fac0-6691-4ad6-ba6c-e5d84527da06.gif)
 
 <br/>
 

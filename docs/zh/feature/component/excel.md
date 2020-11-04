@@ -4,7 +4,7 @@
 
 Excel 的导入导出都是依赖于[js-xlsx](https://github.com/SheetJS/js-xlsx)来实现的。
 
-在 `js-xlsx`的基础上又封装了[Export2Excel.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/vendor/Export2Excel.js)来方便导出数据。
+在 `js-xlsx`的基础上又封装了[Export2Excel.js](https://github.com/adempiere/adempiere-vue/blob/master/src/vendor/Export2Excel.js)来方便导出数据。
 
 ### 使用
 
@@ -61,12 +61,12 @@ import('@/vendor/Export2Excel').then(excel => {
 })
 ```
 
-- [在线 DEMO](https://panjiachen.github.io/vue-element-admin/#/excel/export-excel)
-- [在线代码](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/views/excel/export-excel.vue)
+- [在线 DEMO](https://adempiere.github.io/adempiere-vue/#/excel/export-excel)
+- [在线代码](https://github.com/adempiere/adempiere-vue/blob/master/src/views/excel/export-excel.vue)
 
 ## Excel 导入
 
-封装了[UploadExcel](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/components/UploadExcel/index.vue)Excel 导入组件，支持点击和拖拽上传，同样它也是依赖`js-xlsx`的。
+封装了[UploadExcel](https://github.com/adempiere/adempiere-vue/blob/master/src/components/UploadExcel/index.vue)Excel 导入组件，支持点击和拖拽上传，同样它也是依赖`js-xlsx`的。
 
 它提供了两个回调函数：
 
@@ -100,5 +100,5 @@ import('@/vendor/Export2Excel').then(excel => {
     }
 ```
 
-- [在线 DEMO](https://panjiachen.github.io/vue-element-admin/#/excel/upload-excel)
-- [在线代码](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/views/excel/upload-excel.vue)
+- [在线 DEMO](https://adempiere.github.io/adempiere-vue/#/excel/upload-excel)
+- [在线代码](https://github.com/adempiere/adempiere-vue/blob/master/src/views/excel/upload-excel.vue)

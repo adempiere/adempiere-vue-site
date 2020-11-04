@@ -36,7 +36,7 @@ The current method of using the global reference. Code in: `static/tinymce` (The
 
 After <Badge text="v4.2.0+"/> will dynamic import tinymce by `CDN` .
 
-If you want to change the cdn address or the version of tinymce, just find tinymce cdn in [@/components/Tinymce](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/components/Tinymce/index.vue) then modified it. It will be automatically injected into `index.html` via `dynamicLoadScript`.
+If you want to change the cdn address or the version of tinymce, just find tinymce cdn in [@/components/Tinymce](https://github.com/adempiere/adempiere-vue/blob/master/src/components/Tinymce/index.vue) then modified it. It will be automatically injected into `index.html` via `dynamicLoadScript`.
 
 > The current use of the npm installation 'Tinymce' method is more complex and has some problems (which may be used in the future). :space_invader:
 

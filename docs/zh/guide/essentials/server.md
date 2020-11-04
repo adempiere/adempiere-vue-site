@@ -2,7 +2,7 @@
 
 ## 前端请求流程
 
-在 `vue-element-admin` 中，一个完整的前端 UI 交互到服务端处理流程是这样的：
+在 `adempiere-vue` 中，一个完整的前端 UI 交互到服务端处理流程是这样的：
 
 1.  UI 组件交互操作；
 2.  调用统一管理的 api service 请求函数；
@@ -22,7 +22,7 @@ api/
 
 ## request.js
 
-其中，`@/utils/request.js` 是基于 [axios](https://github.com/axios/axios) 的封装，便于统一处理 POST，GET 等请求参数，请求头，以及错误提示信息等。具体可以参看 [request.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/utils/request.js)。
+其中，`@/utils/request.js` 是基于 [axios](https://github.com/axios/axios) 的封装，便于统一处理 POST，GET 等请求参数，请求头，以及错误提示信息等。具体可以参看 [request.js](https://github.com/adempiere/adempiere-vue/blob/master/src/utils/request.js)。
 它封装了全局 `request拦截器`、`response拦截器`、`统一的错误处理`、`统一做了超时处理`、`baseURL设置等`。
 
 ## 一个请求文章列表页的例子：
@@ -68,7 +68,7 @@ VUE_APP_BASE_API = '/dev-api' #注入本地 api 的根路径
 VUE_APP_BASE_API2 = '/dev-api2' #注入本地 api 的根路径
 ```
 
-之后根据环境变量创建`axios`实例，让它具有不同的`baseURL`。 [@/utils/request.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/utils/request.js)
+之后根据环境变量创建`axios`实例，让它具有不同的`baseURL`。 [@/utils/request.js](https://github.com/adempiere/adempiere-vue/blob/master/src/utils/request.js)
 
 ```js
 // create an axios instance

@@ -6,7 +6,7 @@ sidebarDepth: 3
 
 Componente global de icono: Icono Svg.
 
-Por defecto, el componente Icono Svg está registrado en [@/icons](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/icons/index.js#L6), y puede usarse en cualquier parte del proyecto. Todos los iconos se pueden encontrar en [@/icons/svg](https://github.com/PanJiaChen/vue-element-admin/tree/master/src/icons/svg). Puedes agregar o eliminar el icono por ti mismo, y el icono se importará automáticamente sin operación manual.
+Por defecto, el componente Icono Svg está registrado en [@/icons](https://github.com/adempiere/adempiere-vue/blob/master/src/icons/index.js#L6), y puede usarse en cualquier parte del proyecto. Todos los iconos se pueden encontrar en [@/icons/svg](https://github.com/adempiere/adempiere-vue/tree/master/src/icons/svg). Puedes agregar o eliminar el icono por ti mismo, y el icono se importará automáticamente sin operación manual.
 
 ## Uso
 
@@ -34,5 +34,5 @@ Si estás descargando un icono de [iconfont](https://www.iconfont.cn/), recuerda
 Todos los iconos utilizados en este proyecto tienen especificaciones de tamaño 128\*128.
 
 :::tip
-Si encuentras el color incorrecto del icono, puedes consultar el [issue](https://github.com/PanJiaChen/vue-element-admin/issues/330) para modificarlo
+Si encuentras el color incorrecto del icono, puedes consultar el [issue](https://github.com/adempiere/adempiere-vue/issues/330) para modificarlo
 :::

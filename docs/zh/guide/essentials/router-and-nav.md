@@ -96,14 +96,14 @@ meta: {
 前面也介绍了，侧边栏是通过读取路由并结合权限判断而动态生成的，而且还需要支持路由无限嵌套，所以这里还使用到了递归组件。
 
 ::: tip 代码地址
-[@/layout/components/Sidebar](https://github.com/PanJiaChen/vue-element-admin/tree/master/src/layout/components/Sidebar)
+[@/layout/components/Sidebar](https://github.com/adempiere/adempiere-vue/tree/master/src/layout/components/Sidebar)
 :::
 
-这里同时也改造了 `element-ui` 默认侧边栏不少的样式，所有的 css 都可以在 [@/styles/sidebar.scss](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/styles/sidebar.scss) 中找到，你也可以根据自己的需求进行修改。
+这里同时也改造了 `element-ui` 默认侧边栏不少的样式，所有的 css 都可以在 [@/styles/sidebar.scss](https://github.com/adempiere/adempiere-vue/blob/master/src/styles/sidebar.scss) 中找到，你也可以根据自己的需求进行修改。
 
 **这里需要注意一下**，一般侧边栏有两种形式即：`submenu` 和 直接 `el-menu-item`。 一个是嵌套子菜单，另一个则是直接一个链接。如下图：
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/e94739d6-d701-45c8-8c6e-0f4bb10c3b46.png)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/e94739d6-d701-45c8-8c6e-0f4bb10c3b46.png)
 
 在 `Sidebar` 中已经帮你做了判断，当你一个路由下面的 `children` 声明的路由大于>1 个时，自动会变成嵌套的模式。如果子路由正好等于一个就会默认将子路由作为根路由显示在侧边栏中，若不想这样，可以通过设置在根路由中设置`alwaysShow: true`来取消这一特性。如：
 
@@ -137,12 +137,12 @@ meta: {
 ```
 
 ::: tip unique-opened
-你可以在[Sidebar/index.vue](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/layout/components/Sidebar/index.vue)中设置`unique-opened`来控制侧边栏，是否只保持一个子菜单的展开。
+你可以在[Sidebar/index.vue](https://github.com/adempiere/adempiere-vue/blob/master/src/layout/components/Sidebar/index.vue)中设置`unique-opened`来控制侧边栏，是否只保持一个子菜单的展开。
 :::
 
 ## 多级目录(嵌套路由)
 
-如果你的路由是多级目录，如本项目 [@/views/nested](https://github.com/PanJiaChen/vue-element-admin/tree/master/src/views/nested) 那样， 有三级路由嵌套的情况下，**不要忘记还要手动在二级目录的根文件下添加一个 `<router-view>`**。
+如果你的路由是多级目录，如本项目 [@/views/nested](https://github.com/adempiere/adempiere-vue/tree/master/src/views/nested) 那样， 有三级路由嵌套的情况下，**不要忘记还要手动在二级目录的根文件下添加一个 `<router-view>`**。
 
 ```html
  <!-- 父级路由组件  -->
@@ -154,9 +154,9 @@ meta: {
 </template>
 ```
 
-如：[@/views/nested/menu1/index.vue](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/views/nested/menu1/index.vue)，原则上有多少级路由嵌套就需要多少个`<router-view>`。
+如：[@/views/nested/menu1/index.vue](https://github.com/adempiere/adempiere-vue/blob/master/src/views/nested/menu1/index.vue)，原则上有多少级路由嵌套就需要多少个`<router-view>`。
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/9459de62-64d0-4819-9730-daf3f9889018.png)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/9459de62-64d0-4819-9730-daf3f9889018.png)
 
 <br/>
 
@@ -164,7 +164,7 @@ meta: {
 
 在用 spa(单页面应用) 这种开发模式之前，用户每次点击侧边栏都会重新请求这个页面，用户渐渐养成了点击侧边栏当前路由来刷新 view 的习惯。但现在 spa 就不一样了，用户点击当前高亮的路由并不会刷新 view，因为 vue-router 会拦截你的路由，它判断你的 url 并没有任何变化，所以它不会触发任何钩子或者是 view 的变化。[issue](https://github.com/vuejs/vue-router/issues/296) 地址，社区也对该问题展开了激烈讨论。
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/5d0b0391-ea6a-45f2-943e-aff5dbe74d12.png)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/5d0b0391-ea6a-45f2-943e-aff5dbe74d12.png)
 
 尤大本来也说要增加一个方法来强刷 view，但后来他又改变了心意/(ㄒ o ㄒ)/~~。但需求就摆在这里，我们该怎么办呢？他说了不改变 current URL 就不会触发任何东西，那我可不可以强行触发你的 hook 呢？上有政策， 下有对策我们变着花来 hack。方法也很简单，通过不断改变 url 的 query 来触发 view 的变化。我们监听侧边栏每个 link 的 click 事件，每次点击都给 router push 一个不一样的 query 来确保会重新刷新 view。
 
@@ -186,7 +186,7 @@ ps:不要忘了在 `router-view` 加上一个特定唯一的 `key`，如 `<route
 
 **相关例子**
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/0dd7f78b-0fb5-4c7d-8236-cee78f960984.jpg)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/0dd7f78b-0fb5-4c7d-8236-cee78f960984.jpg)
 
 点击图片所示的全局 size 大小切换按钮，你会发现 页面 `app-main`区域进行了刷新。它就是运用了重定向到 `Redirect`页面之后再重定向回原始页面的方法。
 
@@ -203,7 +203,7 @@ this.$router.replace({
 
 ```js
 // redirect.vue
-// https://github.com/PanJiaChen/vue-element-admin/blob/master/src/views/redirect/index.vue
+// https://github.com/adempiere/adempiere-vue/blob/master/src/views/redirect/index.vue
 export default {
   beforeCreate() {
     const { params, query } = this.$route
@@ -222,10 +222,10 @@ export default {
 
 本项目中也封装了一个面包屑导航，它也是通过 `watch $route` 变化动态生成的。它和 menu 也一样，也可以通过之前那些配置项控制一些路由在面包屑中的展现。大家也可以结合自己的业务需求增改这些自定义属性。比如可以在路由中声明`breadcrumb:false`，让其不在 breadcrumb 面包屑显示。
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/4c60b3fc-febd-4e22-9150-724dcbd25a8e.gif)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/4c60b3fc-febd-4e22-9150-724dcbd25a8e.gif)
 
 ::: tip 代码地址
-[@/components/Breadcrumb](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/components/Breadcrumb/index.vue)
+[@/components/Breadcrumb](https://github.com/adempiere/adempiere-vue/blob/master/src/components/Breadcrumb/index.vue)
 :::
 
 ## 侧边栏滚动问题
@@ -245,7 +245,7 @@ overflow-y: scroll;
 所以现版本中使用了 `el-scrollbar` 来处理侧边栏滚动问题。
 
 ::: tip 代码地址
-[@/layout/components/Sidebar](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/layout/components/Sidebar/index.vue)
+[@/layout/components/Sidebar](https://github.com/adempiere/adempiere-vue/blob/master/src/layout/components/Sidebar/index.vue)
 :::
 
 ## 侧边栏 外链 <Badge text="v3.8.2+"/>
@@ -260,7 +260,7 @@ overflow-y: scroll;
   "component": Layout,
   "children": [
     {
-      "path": "https://github.com/PanJiaChen/vue-element-admin",
+      "path": "https://github.com/adempiere/adempiere-vue",
       "meta": { "title": "externalLink", "icon": "link" }
     }
   ]
@@ -273,7 +273,7 @@ overflow-y: scroll;
 
 <img :src="$withBase('/images/default-openeds.jpg')" alt="default-openeds.jpg" width="250px">
 
-可以通过`default-openeds`来进行设置，首先找到 [侧边栏代码](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/layout/components/Sidebar/index.vue)
+可以通过`default-openeds`来进行设置，首先找到 [侧边栏代码](https://github.com/adempiere/adempiere-vue/blob/master/src/layout/components/Sidebar/index.vue)
 
 ```html
  <el-menu

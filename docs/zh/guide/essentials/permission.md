@@ -6,7 +6,7 @@
 
 但其实很多公司的业务逻辑可能不是这样的，举一个例子来说，很多公司的需求是每个页面的权限是动态配置的，不像本项目中是写死预设的。但其实原理是相同的。如：你可以在后台通过一个 tree 控件或者其它展现形式给每一个页面动态配置权限，之后将这份路由表存储到后端。当用户登录后得到 `roles`，前端根据`roles` 去向后端请求可访问的路由表，从而动态生成可访问页面，之后就是 router.addRoutes 动态挂载到 router 上，你会发现原来是相同的，万变不离其宗。
 
-只是多了一步将后端返回路由表和本地的组件映射到一起。相关[issue](https://github.com/PanJiaChen/vue-element-admin/issues/293)
+只是多了一步将后端返回路由表和本地的组件映射到一起。相关[issue](https://github.com/adempiere/adempiere-vue/issues/293)
 
 ```js
 const map={
@@ -29,7 +29,7 @@ Ps:不排除之后本项目会增加权限控制面板支持真正的动态配�
 
 ## 指令权限
 
-封装了一个指令权限，能简单快速的实现按钮级别的权限判断。 [v-permission](https://github.com/PanJiaChen/vue-element-admin/tree/master/src/directive/permission)
+封装了一个指令权限，能简单快速的实现按钮级别的权限判断。 [v-permission](https://github.com/adempiere/adempiere-vue/tree/master/src/directive/permission)
 
 **使用**
 

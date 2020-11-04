@@ -2,17 +2,17 @@
 
 El diseño general de la página es la estructura de un producto y a menudo incluye navegación, barras laterales, breadcrumbs y contenido. Para comprender un proyecto de administración, primero comprende su diseño básico.
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/7066d74f-12c5-47d6-b6ad-f22b43fec917.png)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/7066d74f-12c5-47d6-b6ad-f22b43fec917.png)
 
 ::: tip Código
-[@/layout](https://github.com/PanJiaChen/vue-element-admin/tree/master/src/layout)
+[@/layout](https://github.com/adempiere/adempiere-vue/tree/master/src/layout)
 :::
 
 `@` es el [alias](https://webpack.js.org/configuration/resolve/#resolve-alias) de webpack. Si no lo entiendes por favor estudíalo por tu cuenta.
 
 <br>
 
-La mayoría de las páginas en `vue-element-admin` se basan en este `layout`, excepto las páginas individuales como: `login`, `404`, `401`, etc., las cuales no utilizan este diseño. También es fácil si se quiere tener varios diseños en un proyecto, simplemente hay que elegir un componente de diseño diferente en el enrutamiento de primer nivel.
+La mayoría de las páginas en `adempiere-vue` se basan en este `layout`, excepto las páginas individuales como: `login`, `404`, `401`, etc., las cuales no utilizan este diseño. También es fácil si se quiere tener varios diseños en un proyecto, simplemente hay que elegir un componente de diseño diferente en el enrutamiento de primer nivel.
 
 ```js
 // Sin diseño
@@ -55,14 +55,14 @@ Esto utiliza vue-router [anidación de enrutamiento](https://router.vuejs.org/gu
 ## app-main
 
 ::: tip Código
-[@/layout/components/AppMain](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/layout/components/AppMain.vue)
+[@/layout/components/AppMain](https://github.com/adempiere/adempiere-vue/blob/master/src/layout/components/AppMain.vue)
 :::
 
 Aquí hay una capa de `keep-alive`, afuera `app-main` es principalmente para almacenar en caché `<router-view>`, con la navegación de la pestaña `tabs-view` de la página, si no lo necesitas [eliminalo](tags-view.md).
 
 `transition` define la animación de cambio entre páginas, puedes modificar la animación de transición según tus propias necesidades. [Documentación](https://vuejs.org/v2/guide/transitions.html) relacionada.
 
-Se proporcionan dos animaciones de transición de forma predeterminada `fade` y `fade-transform`. Para la implementación específica de CSS, consulta [transition.scss](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/styles/transition.scss). Si necesitas cambiarla, puedes modificar `name` de `transition` en [AppMain.vue](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/layout/components/AppMain.vue).
+Se proporcionan dos animaciones de transición de forma predeterminada `fade` y `fade-transform`. Para la implementación específica de CSS, consulta [transition.scss](https://github.com/adempiere/adempiere-vue/blob/master/src/styles/transition.scss). Si necesitas cambiarla, puedes modificar `name` de `transition` en [AppMain.vue](https://github.com/adempiere/adempiere-vue/blob/master/src/layout/components/AppMain.vue).
 
 <br>
 
@@ -70,7 +70,7 @@ Se proporcionan dos animaciones de transición de forma predeterminada `fade` y 
 
 **Diferente enrutador, el mismo componente vue** En un trabajo real, hay muchas situaciones como:
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/ac5047c9-cb75-4415-89e3-9386c42f3ef9.jpeg)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/ac5047c9-cb75-4415-89e3-9386c42f3ef9.jpeg)
 
 El mismo componente se utiliza para crear y editar páginas. Por defecto, cuando se cambien estas dos páginas, no se activarán los hooks creados o montados de vue. [Oficialmente dice](https://router.vuejs.org/guide/advanced/data-fetching.html#data-fetching) que puedes hacer esto a través del cambio de reloj `$route`. A decir verdad, sigue siendo muy problemático. Más tarde descubrí que simplemente podía agregar una clave única a router-view para asegurar que los hooks de enrutamiento se vuelvan a representar cuando se cambia la ruta. Es mucho más simple.
 
@@ -88,7 +88,7 @@ computed: {
 ::: tip
 **O** Puedes declarar dos vistas diferentes, como `editForm` y `createForm` en este proyecto, pero introducirlo en el mismo componente.
 
-Código: [@/views/example](https://github.com/PanJiaChen/vue-element-admin/tree/master/src/views/example)
+Código: [@/views/example](https://github.com/adempiere/adempiere-vue/tree/master/src/views/example)
 :::
 
 ```html

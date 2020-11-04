@@ -14,11 +14,11 @@ npm run build:stage
 
 Después de que el paquete de compilación sea exitoso, la carpeta `dist` se generará en el directorio raíz, que es la construcción de un archivo empaquetado, generalmente archivos estáticos como `***. js`, `***. css`, `index.html`, etc.
 
-Si necesitas una compilación personalizada, como especificar el directorio dist, debes configurarlo a través de `outputDir` en [config](https://github.com/PanJiaChen/vue-element-admin/blob/master/vue.config.js).
+Si necesitas una compilación personalizada, como especificar el directorio dist, debes configurarlo a través de `outputDir` en [config](https://github.com/adempiere/adempiere-vue/blob/master/vue.config.js).
 
 ### Variables de entorno
 
-La configuración de todos los entornos de prueba o variables de entorno formales se encuentra en el archivo `.env.xxxx` como [.env.development](https://github.com/PanJiaChen/vue-element-admin/blob/master/.env.development).
+La configuración de todos los entornos de prueba o variables de entorno formales se encuentra en el archivo `.env.xxxx` como [.env.development](https://github.com/adempiere/adempiere-vue/blob/master/.env.development).
 
 Todos se inyectan en el contexto global a través de los complementos `webpack.DefinePlugin`.
 
@@ -41,7 +41,7 @@ npm run preview -- --report
 
 Después de ejecutar, puedes ver la distribución de tamaño específico en [http://localhost:9526/report.html](http://localhost:9526/report.html)
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/3fddf034-2b38-4299-b0d2-b748fb2abef0.jpg)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/3fddf034-2b38-4299-b0d2-b748fb2abef0.jpg)
 
 ::: tip
 Se recomienda utilizar gzip, después de usarlo, el volumen será solo el 1/3 del original más o menos. También puedes usar Lazy Loading o Code Splitting.
@@ -62,7 +62,7 @@ publicPath: './'
 
 ### Enrutador y servidor
 
-En vue-element-admin, el enrutamiento front-end usa `vue-router`, por lo que tienes dos opciones: `browserHistory` y `hashHistory`.
+En adempiere-vue, el enrutamiento front-end usa `vue-router`, por lo que tienes dos opciones: `browserHistory` y `hashHistory`.
 
 Simplemente hablando, la diferencia entre ellos es el trato con el enrutamiento. `hashHistory` es procesado por la ruta que sigue de `#`, la gestión de enrutamiento de front-end a través de [HTML 5 History](https://developer.mozilla.org/en-US/docs/Web/API/History_API), y `browserHistory` es similar a nuestra ruta de acceso de página habitual, y no con `#`, pero debe a través de la configuración del servidor.
 

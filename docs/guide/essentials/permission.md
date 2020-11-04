@@ -6,7 +6,7 @@ The implementation of this project's permission is: compare the routing table by
 
 But in fact, the business logic of many companies may not be the case. For example, the requirement of many companies is that the permissions of each page are dynamically configured, unlike the default settings in this project. But in fact the principle is the same. For example, you can dynamically configure permissions for each page through a tree control or other presentation, and then store this routing table to the back end. When the user logs in to get `roles`, the front end requests the accessible routing table to the backend according to `roles`, so that the accessible pages are dynamically generated. After that, the router.addRoutes is dynamically mounted to the router. You will find the same. , never change their case.
 
-Just one more step to map the back-end return routing table with the local components. [issue](https://github.com/PanJiaChen/vue-element-admin/issues/293)
+Just one more step to map the back-end return routing table with the local components. [issue](https://github.com/adempiere/adempiere-vue/issues/293)
 
 ```js
 const map={
@@ -29,7 +29,7 @@ The control code of the routing level right now is in `@/permission.js`. If you 
 
 ## Permission directive
 
-Write a permission directive, and can easily and quickly implement button-level permission judgment. [v-permission](https://github.com/PanJiaChen/vue-element-admin/tree/master/src/directive/permission)
+Write a permission directive, and can easily and quickly implement button-level permission judgment. [v-permission](https://github.com/adempiere/adempiere-vue/tree/master/src/directive/permission)
 
 **Use**
 

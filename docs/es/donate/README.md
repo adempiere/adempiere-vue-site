@@ -6,7 +6,7 @@ sidebar: false
 Si encuentras útil este proyecto, puedes comprar un vaso de jugo para el autor :tropical_drink:
 :::
 
-![donar](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/bd273f0d-83a0-4ef2-92e1-9ac8ed3746b9.png)
+![donar](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/bd273f0d-83a0-4ef2-92e1-9ac8ed3746b9.png)
 
 ## O
 

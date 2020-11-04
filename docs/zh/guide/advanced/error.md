@@ -22,7 +22,7 @@
 
 ## 请求
 
-项目里所有的请求都会走`@/utils/request.js`里面创建的的 axios 实例，它统一做了错误处理，[完整代码](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/utils/request.js)。
+项目里所有的请求都会走`@/utils/request.js`里面创建的的 axios 实例，它统一做了错误处理，[完整代码](https://github.com/adempiere/adempiere-vue/blob/master/src/utils/request.js)。
 
 你可以在`service.interceptors.response` response 拦截器之中根据自己的实际业务统一针对不同的状态码或者根据自定义 code 来做错误处理。如：
 
@@ -86,13 +86,13 @@ getInfo()
 ## 代码
 
 本项目也做了代码层面的错误处理，如果你开启了`eslint`在编写代码的时候就会提示错误。如：
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/b037f47c-1f7b-487f-bb05-32e7300767d2.png)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/b037f47c-1f7b-487f-bb05-32e7300767d2.png)
 
 当然还有很多不能被`eslint`检查出来的错误，vue 也提供了全局错误处理钩子[errorHandler](https://vuejs.org/v2/api/#errorHandler)，所以本项目也做了相对应的错误收集。
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/360e4842-4db5-42d0-b078-f9a84a825546.gif)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/360e4842-4db5-42d0-b078-f9a84a825546.gif)
 
 ::: tip
-监听错误：[@/errorLog.js](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/errorLog.js)
+监听错误：[@/errorLog.js](https://github.com/adempiere/adempiere-vue/blob/master/src/errorLog.js)
 
-错误展示组件：[@/components/ErrorLog](https://github.com/PanJiaChen/vue-element-admin/blob/master/src/components/ErrorLog/index.vue)
+错误展示组件：[@/components/ErrorLog](https://github.com/adempiere/adempiere-vue/blob/master/src/components/ErrorLog/index.vue)
 :::

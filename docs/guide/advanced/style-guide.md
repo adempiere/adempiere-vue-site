@@ -2,7 +2,7 @@
 
 The style guide for this project is mainly based on the official [style guide](https://vuejs.org/v2/style-guide/index.html) . It is recommended to read the guide before you start using the project, which will help you write more standardized and unified code. Most of these rules are also configured in [eslint-plugin-vue](https://github.com/vuejs/eslint-plugin-vue). When the rules are not followed, will throw an error. For details, see [eslint](./eslint.md) section.
 
-Of course, there are some special specifications that cannot be verified by eslint. You need to pay attention to yourself and follow. The most important thing is the naming rules for files. Take the example of `vue-element-admin` here.
+Of course, there are some special specifications that cannot be verified by eslint. You need to pay attention to yourself and follow. The most important thing is the naming rules for files. Take the example of `adempiere-vue` here.
 
 ## Component
 

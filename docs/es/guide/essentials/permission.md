@@ -6,7 +6,7 @@ La implementación de permisos de este proyecto es: comparar la tabla de enrutam
 
 Pero, en realidad, la lógica empresarial de muchas organizaciones puede no ser el caso. Por ejemplo, el requisito de muchas empresas es que los permisos de cada página se configuren dinámicamente, a diferencia de la configuración predeterminada en este proyecto. Pero, de hecho, el principio es el mismo. Por ejemplo, puedes configurar dinámicamente los permisos para cada página a través de un control de árbol u otra representación, y luego almacenar esta tabla de enrutamiento en el back-end. Cuando el usuario inicia sesión para obtener 'roles', el front-end solicita la tabla de enrutamiento accesible al back-end de acuerdo con 'roles', de modo que las páginas accesibles se generan dinámicamente. Después de eso, router.addRoutes se monta dinámicamente en el enrutador. Encontrarás lo mismo, nunca cambian su caso.
 
-Solo un paso más para mapear la tabla de enrutamiento de retorno del back-end con los componentes locales. [issue](https://github.com/PanJiaChen/vue-element-admin/issues/293)
+Solo un paso más para mapear la tabla de enrutamiento de retorno del back-end con los componentes locales. [issue](https://github.com/adempiere/adempiere-vue/issues/293)
 
 ```js
 const map={
@@ -29,7 +29,7 @@ El código de control del nivel de enrutamiento ahora está en `@/permission.js`
 
 ## Directiva de permiso
 
-Escribe una directiva de permisos, y podrás implementar fácil y rápidamente el juicio de permisos a nivel de botón. [v-permission](https://github.com/PanJiaChen/vue-element-admin/tree/master/src/directive/permission)
+Escribe una directiva de permisos, y podrás implementar fácil y rápidamente el juicio de permisos a nivel de botón. [v-permission](https://github.com/adempiere/adempiere-vue/tree/master/src/directive/permission)
 
 **Uso**
 

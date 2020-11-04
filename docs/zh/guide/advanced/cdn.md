@@ -69,7 +69,7 @@ config.plugin('html').tap(args => {
 
 之后还有一个小细节是如果你用了全局对象方式引入 vue，就不需要 手动 Vue.use(Vuex） ，它会自动挂载，具体见 [issue](https://github.com/vuejs/vuex/issues/731)
 
-完整的[代码修改](https://github.com/PanJiaChen/vue-admin-template/commit/eaaa3c1ddadd114451a1a83e042f1fc56a9809a1)
+完整的[代码修改](https://github.com/adempiere/vue-admin-template/commit/eaaa3c1ddadd114451a1a83e042f1fc56a9809a1)
 
 最终你可以使用 `npm run preview -- --report` 查看效果 如图：
 

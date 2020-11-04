@@ -6,24 +6,24 @@ pageClass: getting-started
 
 [![vue](https://img.shields.io/badge/vue-2.6.10-brightgreen.svg)](https://github.com/vuejs/vue)
 [![element-ui](https://img.shields.io/badge/element--ui-2.7.0-brightgreen.svg)](https://github.com/ElemeFE/element)
-[![Build Status](https://travis-ci.org/PanJiaChen/vue-element-admin.svg?branch=master)](https://travis-ci.org/PanJiaChen/vue-element-admin)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/PanJiaChen/vue-element-admin/blob/master/LICENSE)
-[![GitHub release](https://img.shields.io/github/release/PanJiaChen/vue-element-admin.svg)](https://github.com/PanJiaChen/vue-element-admin/releases)
-[![donate](https://img.shields.io/badge/%24-donate-ff69b4.svg)](https://panjiachen.gitee.io/vue-element-admin-site/zh/donate)
-[![GitHub stars](https://img.shields.io/github/stars/PanJiaChen/vue-element-admin.svg?style=social&label=Stars)](https://github.com/PanJiaChen/vue-element-admin)
+[![Build Status](https://travis-ci.org/adempiere/adempiere-vue.svg?branch=master)](https://travis-ci.org/adempiere/adempiere-vue)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/adempiere/adempiere-vue/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/PanJiaChen/adempiere-vue.svg)](https://github.com/adempiere/adempiere-vue/releases)
+[![donate](https://img.shields.io/badge/%24-donate-ff69b4.svg)](https://adempiere-vue.gitee.io/adempiere-vue-site/zh/donate)
+[![GitHub stars](https://img.shields.io/github/stars/adempiere/adempiere-vue.svg?style=social&label=Stars)](https://github.com/adempiere/adempiere-vue)
 
 <!-- <CodingAD /> -->
 
-[vue-element-admin](http://panjiachen.github.io/vue-element-admin) 是一个后台前端解决方案，它基于 [vue](https://github.com/vuejs/vue) 和 [element-ui](https://github.com/ElemeFE/element)实现。它使用了最新的前端技术栈，内置了 i18 国际化解决方案，动态路由，权限验证，提炼了典型的业务模型，提供了丰富的功能组件，它可以帮助你快速搭建企业级中后台产品原型。相信不管你的需求是什么，本项目都能帮助到你。
+[adempiere-vue](http://adempiere.github.io/adempiere-vue) 是一个后台前端解决方案，它基于 [vue](https://github.com/vuejs/vue) 和 [element-ui](https://github.com/ElemeFE/element)实现。它使用了最新的前端技术栈，内置了 i18 国际化解决方案，动态路由，权限验证，提炼了典型的业务模型，提供了丰富的功能组件，它可以帮助你快速搭建企业级中后台产品原型。相信不管你的需求是什么，本项目都能帮助到你。
 
 :::tip 建议
 本项目的定位是后台集成方案，不太适合当基础模板来进行二次开发。因为本项目集成了很多你可能用不到的功能，会造成不少的代码冗余。如果你的项目不关注这方面的问题，也可以直接基于它进行二次开发。
 
-- 集成方案: [vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
-- 基础模板: [vue-admin-template](https://github.com/PanJiaChen/vue-admin-template)
-- 桌面终端: [electron-vue-admin](https://github.com/PanJiaChen/electron-vue-admin)
+- 集成方案: [adempiere-vue](https://github.com/adempiere/adempiere-vue)
+- 基础模板: [vue-admin-template](https://github.com/adempiere/vue-admin-template)
+- 桌面终端: [electron-vue-admin](https://github.com/adempiere/electron-vue-admin)
 - Typescript 版: [vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template) (鸣谢: [@Armour](https://github.com/Armour))
-- Others: [awesome-project](https://github.com/PanJiaChen/vue-element-admin/issues/2312)
+- Others: [awesome-project](https://github.com/adempiere/adempiere-vue/issues/2312)
   :::
 
 <br/>
@@ -112,7 +112,7 @@ pageClass: getting-started
 - [手摸手，带你用合理的姿势使用 webpack4（上）](https://juejin.im/post/5b56909a518825195f499806)
 - [手摸手，带你用合理的姿势使用 webpack4（下）](https://juejin.im/post/5b5d6d6f6fb9a04fea58aabc)
 
-**本项目不支持低版本浏览器(如 ie)，有需求请自行添加 polyfill [详情](https://github.com/PanJiaChen/vue-element-admin/wiki#babel-polyfill)**
+**本项目不支持低版本浏览器(如 ie)，有需求请自行添加 polyfill [详情](https://github.com/adempiere/adempiere-vue/wiki#babel-polyfill)**
 
 ## 目录结构
 
@@ -157,10 +157,10 @@ pageClass: getting-started
 
 ```bash
 # 克隆项目
-git clone https://github.com/PanJiaChen/vue-element-admin.git
+git clone https://github.com/adempiere/adempiere-vue.git
 
 # 进入项目目录
-cd vue-element-admin
+cd adempiere-vue
 
 # 安装依赖
 npm install
@@ -177,7 +177,7 @@ npm run dev
 ::: tip
 强烈建议不要用直接使用 cnpm 安装，会有各种诡异的 bug，可以通过重新指定 registry 来解决 npm 安装速度慢的问题。若还是不行，可使用 [yarn](https://github.com/yarnpkg/yarn) 替代 `npm`。
 
-Windows 用户若安装不成功，很大概率是`node-sass`安装失败，[解决方案](https://github.com/PanJiaChen/vue-element-admin/issues/24)。
+Windows 用户若安装不成功，很大概率是`node-sass`安装失败，[解决方案](https://github.com/adempiere/adempiere-vue/issues/24)。
 
 另外因为 `node-sass` 是依赖 `python`环境的，如果你之前没有安装和配置过的话，需要自行查看一下相关安装教程。
 :::
@@ -186,23 +186,23 @@ Windows 用户若安装不成功，很大概率是`node-sass`安装失败，[解
 
 启动完成后会自动打开浏览器访问 [http://localhost:9527](http://localhost:9527)， 你看到下面的页面就代表操作成功了。
 
-![](https://panjiachen.gitee.io/gitee-cdn/vue-element-admin-site/1bc334a6-32a8-4f29-a037-ac3f5ce32588.png)
+![](https://adempiere-vue.gitee.io/gitee-cdn/adempiere-vue-site/1bc334a6-32a8-4f29-a037-ac3f5ce32588.png)
 
 接下来你可以修改代码进行业务开发了，本项目内建了典型业务模板、常用业务组件、模拟数据、HMR 实时预览、状态管理、国际化、全局路由等等各种实用的功能来辅助开发，你可以继续阅读和探索左侧的其它文档。
 
 <br/>
 
 ::: tip 建议
-你可以把 `vue-element-admin`当做工具箱或者集成方案仓库，在 `vue-admin-template` 的基础上进行二次开发，想要什么功能或者组件就去 `vue-element-admin` 那里复制过来。
+你可以把 `adempiere-vue`当做工具箱或者集成方案仓库，在 `vue-admin-template` 的基础上进行二次开发，想要什么功能或者组件就去 `adempiere-vue` 那里复制过来。
 :::
 
 ## Contribution
 
-本文档项目地址 [vue-element-admin-site](https://github.com/PanJiaChen/vue-element-admin-site) 基于 [vuepress](https://github.com/vuejs/vuepress)开发。
+本文档项目地址 [adempiere-vue-site](https://github.com/erpcya/adempiere-vue-site) 基于 [vuepress](https://github.com/vuejs/vuepress)开发。
 
 有任何修改和建议都可以该项目 pr 和 issue
 
-[vue-element-admin](https://github.com/PanJiaChen/vue-element-admin) 还在持续迭代中，逐步沉淀和总结出更多功能和相应的实现代码，总结中后台产品模板/组件/业务场景的最佳实践。本项目也十分期待你的参与和[反馈](https://github.com/PanJiaChen/vue-element-admin/issues)。
+[adempiere-vue](https://github.com/adempiere/adempiere-vue) 还在持续迭代中，逐步沉淀和总结出更多功能和相应的实现代码，总结中后台产品模板/组件/业务场景的最佳实践。本项目也十分期待你的参与和[反馈](https://github.com/adempiere/adempiere-vue/issues)。
 
 ## 捐赠
 
@@ -220,7 +220,7 @@ Modern browsers and Internet Explorer 10+.
 
 ## 其它
 
-群主 **[圈子](https://jianshiapp.com/circles/1209)** 群主会经常分享一些技术相关的东西，或者加入 [qq 群](https://github.com/PanJiaChen/vue-element-admin/issues/602) 或者关注 [微博](https://weibo.com/u/3423485724?is_all=1)。
+群主 **[圈子](https://jianshiapp.com/circles/1209)** 群主会经常分享一些技术相关的东西，或者加入 [qq 群](https://github.com/adempiere/adempiere-vue/issues/602) 或者关注 [微博](https://weibo.com/u/3423485724?is_all=1)。
 
 ## Vue 生态圈
 

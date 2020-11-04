@@ -25,7 +25,7 @@ When you have more and more pages in your project, using `lazy-loading` in the d
 module.exports = file => require('@/views/' + file + '.vue').default
 ```
 
-**Note here that this method only supports `vue-loader at least v13.0.0+`**[vue-element-admin/issues/231](https://github.com/PanJiaChen/vue-element-admin/issues/231)
+**Note here that this method only supports `vue-loader at least v13.0.0+`**[adempiere-vue/issues/231](https://github.com/adempiere/adempiere-vue/issues/231)
 
 Production：
 
@@ -76,11 +76,11 @@ After that, you're done. Routing can be written as usual.
  { path: '/login', component: () => import('@/views/login/index')}
 ```
 
-[Related code changes](https://github.com/PanJiaChen/vue-element-admin/pull/727)
+[Related code changes](https://github.com/adempiere/adempiere-vue/pull/727)
 
 ## vue-cli@3 [The plan has been eliminated]
 
-`vue-element-admin@4` has been modified to build based on `vue-cli` in the new version. So in the new version you just need to set `VUE_CLI_BABEL_TRANSPILE_MODULES:true` in the `.env.development` environment variable configuration file, specifically [code](https://github.com/PanJiaChen/vue-element-admin/blob/master/.env.development).
+`adempiere-vue@4` has been modified to build based on `vue-cli` in the new version. So in the new version you just need to set `VUE_CLI_BABEL_TRANSPILE_MODULES:true` in the `.env.development` environment variable configuration file, specifically [code](https://github.com/adempiere/adempiere-vue/blob/master/.env.development).
 
 Its implementation logic and principle are the same as before, it based on `babel-plugin-dynamic-import-node`.The only thing you need to set a variable in `vue-cli` is to borrow the default configuration of `vue-cli`. By reading [source code](https://github.com/vuejs/vue-cli/blob/dev/packages/@vue/babel-preset-app/index.js), `vue-cli` will pass `VUE_CLI_BABEL_TRANSPILE_MODULES`,this environment variable to distinguish whether to use `babel-plugin-dynamic-import-node`, so we only need to set it to true. Although its original intention was for unit testing, it just met our needs.
 
