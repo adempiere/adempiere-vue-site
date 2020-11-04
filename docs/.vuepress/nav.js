@@ -14,7 +14,7 @@ var EcosystemNav = [
       },
       {
         text: 'electron-vue-admin',
-        link: 'https://github.com/adempiere/electron-vue-admin'
+        link: 'https://github.com/PanJiaChen/electron-vue-admin'
       },
       {
         text: 'vue-typescript-admin-template',

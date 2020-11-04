@@ -21,7 +21,7 @@ pageClass: getting-started
 
 - 集成方案: [adempiere-vue](https://github.com/adempiere/adempiere-vue)
 - 基础模板: [vue-admin-template](https://github.com/adempiere/vue-admin-template)
-- 桌面终端: [electron-vue-admin](https://github.com/adempiere/electron-vue-admin)
+- 桌面终端: [electron-vue-admin](https://github.com/PanJiaChen/electron-vue-admin)
 - Typescript 版: [vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template) (鸣谢: [@Armour](https://github.com/Armour))
 - Others: [awesome-project](https://github.com/adempiere/adempiere-vue/issues/2312)
   :::

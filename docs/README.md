@@ -17,7 +17,7 @@ features:
     details: Built-in industry universal international solution
   - title: Theming
     details: Supports multiple dynamic skin methods
-footer: MIT Licensed | Copyright © 2017-present PanJiaChen
+footer: GNU/GPL v3 Licensed | Copyright © 2019-present ADempiere
 ---
 
 ## Getting Started

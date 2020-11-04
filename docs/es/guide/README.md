@@ -4,6 +4,8 @@ pageClass: getting-started
 
 # Introducción
 
+**Nota: Esta documentación fue forkeada del proyecto original de [PanJiaChen](https://github.com/PanJiaChen/vue-element-admin-site). El crédito es para él puesto que fue el que inició este gran proyecto. Cualquier cambio después de forkeado será hecho por el [equipo de ADempiere](https://github.com/adempiere/adempiere)**
+
 [![vue](https://img.shields.io/badge/vue-2.6.10-brightgreen.svg)](https://github.com/vuejs/vue)
 [![element-ui](https://img.shields.io/badge/element--ui-2.7.0-brightgreen.svg)](https://github.com/ElemeFE/element)
 [![Build Status](https://travis-ci.org/adempiere/adempiere-vue.svg?branch=master)](https://travis-ci.org/adempiere/adempiere-vue)
@@ -22,7 +24,7 @@ De lo contrario, puedes usar [vue-admin-template](https://github.com/adempiere/v
 
 - Solución integrada: [adempiere-vue](https://github.com/adempiere/adempiere-vue)
 - Plantilla Básica: [vue-admin-template](https://github.com/adempiere/vue-admin-template)
-- Desktop: [electron-vue-admin](https://github.com/adempiere/electron-vue-admin)
+- Desktop: [electron-vue-admin](https://github.com/PanJiaChen/electron-vue-admin)
 - Typescript: [vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template) (Créditos: [@Armour](https://github.com/Armour))
 - Otros: [awesome-project](https://github.com/adempiere/adempiere-vue/issues/2312)
   :::
