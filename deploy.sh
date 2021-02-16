@@ -16,6 +16,6 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f "https://${access_token}@github.com/erpcya/adempiere-vue-site.git" master:gh-pages
+git push -f "https://${access_token}@github.com/adempiere/adempiere-vue-site.git" master:gh-pages
 
 cd -
