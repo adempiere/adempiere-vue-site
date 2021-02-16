@@ -7,7 +7,7 @@ The documentation source of [adempiere-vue](https://github.com/adempiere/adempie
 
 ```bash
 # clone the project
-git clone git@github.com:PanJiaChen/adempiere-vue-site.git
+git clone https://github.com/adempiere/adempiere-vue-site.git
 
 # install dependency
 npm install
