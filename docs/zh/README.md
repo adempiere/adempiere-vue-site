@@ -20,5 +20,18 @@ features:
 footer: MIT Licensed | Copyright © 2017-present PanJiaChen
 ---
 
+## Getting Started
+
+```bash
+# clone the project
+git clone https://github.com/adempiere/adempiere-vue.git
+
+# install dependency
+yarn
+
+# develop
+yarn dev
+```
+
 ## Demo
 [ADempiere UI Demo](https://demo-ui.erpya.com/)

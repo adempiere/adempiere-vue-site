@@ -27,10 +27,10 @@ footer: GNU/GPL v3 Licensed | Copyright © 2019-present ADempiere
 git clone https://github.com/adempiere/adempiere-vue.git
 
 # install dependency
-npm install
+yarn
 
 # develop
-npm run dev
+yarn dev
 ```
 
 ## Demo

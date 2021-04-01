@@ -27,10 +27,10 @@ footer: Licencia MIT | Derechos de autor © 2017-presente PanJiaChen
 git clone https://github.com/adempiere/adempiere-vue.git
 
 # instalar dependencias
-npm install
+yarn
 
-# desarrollar
-npm run dev
+# Correr cliente
+yarn dev
 ```
 ## Demo
 [ADempiere UI Demo](https://demo-ui.erpya.com/)
