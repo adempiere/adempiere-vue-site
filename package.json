@@ -4,6 +4,7 @@
   "description": "adempiere-vue-site have all related to documentation of ADempiere Vue Client",
   "main": "index.js",
   "scripts": {
+    "start": "vuepress dev docs",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "precommit": "lint-staged",
