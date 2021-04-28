@@ -38,5 +38,9 @@ jobs:
             git config --global user.email "yamelsenih@gmail.com" 
             git config --global user.name "Yamel Senih" 
             git add -A 
-            git commit -m 'deploy' 
-            git push -f "https://${{ secrets.GITHUB_TOKEN }}@github.com/adempiere/adempiere-vue-site.git" master:gh-pages
+            git commit -m 'deploy'
+      - uses: ad-m/github-push-action@master
+        with:
+          branch: gh-pages
+          directory: docs/.vuepress/dist
+          github_token: ${{ secrets.GITHUB_TOKEN }}
