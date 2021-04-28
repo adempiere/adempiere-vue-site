@@ -6,7 +6,7 @@ actionText: Get Started →
 actionLink: /guide/
 features:
   - title: Feature-rich
-    details: Typical templates for enterprise applications and various components
+    details: A strong framework of ADempiere for many enterprise applications and various components
   - title: Best Practice
     details: Reasonable framework choice, good engineering practice
   - title: Up-to-date Dev Stack
@@ -27,13 +27,11 @@ footer: GNU/GPL v3 Licensed | Copyright © 2019-present ADempiere
 git clone https://github.com/adempiere/adempiere-vue.git
 
 # install dependency
-npm install
+yarn install
 
 # develop
-npm run dev
+yarn dev
 ```
-
-open http://localhost:8080/adempiere-vue-site/
 
 ## Demo
 

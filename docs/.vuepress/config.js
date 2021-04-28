@@ -6,7 +6,7 @@ var { genNav, getComponentSidebar, deepClone } = utils
 
 module.exports = {
   title: 'adempiere-vue',
-  description: 'A magical vue admin',
+  description: 'The new UI for ADempiere ERP',
   base: '/adempiere-vue-site/',
   head: [
     [
@@ -204,15 +204,16 @@ module.exports = {
   locales: {
     '/': {
       lang: 'en-US',
-      description: 'A magical vue admin'
+      description: 'The new UI for ADempiere ERP'
     },
     '/zh/': {
       lang: 'zh-CN',
-      description: 'A magical vue admin'
+      description: 'The new UI for ADempiere ERP'
     },
     '/es/': {
       lang: 'es-ES',
-      description: 'Un administrador mágico de vue'
+      description:
+        'La nueva UI para ADempiere ERP, tome su tiempo para ver estamaravillosa interfaz adaptada a los requerimientos de su negocio'
     }
   },
   configureWebpack: {
