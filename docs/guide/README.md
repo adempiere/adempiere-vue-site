@@ -165,14 +165,11 @@ This project has built the following templates, and have built a scaffold based 
 # clone the project
 git clone https://github.com/adempiere/adempiere-vue.git
 
-# enter the project directory
-cd adempiere-vue
-
 # install dependency
-npm install
+yarn
 
 # develop
-npm run dev
+yarn dev
 ```
 
 <br/>
