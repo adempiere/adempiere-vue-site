@@ -33,7 +33,6 @@ jobs:
       - run: npm run build
       - uses: github-actions-x/commit@v2.8
         with:
-          github-token: sadhjgsdsd
           push-branch: gh-pages
           commit-message: 'build page'
           force-add: true
