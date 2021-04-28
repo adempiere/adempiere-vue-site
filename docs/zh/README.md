@@ -27,11 +27,12 @@ footer: MIT Licensed | Copyright © 2017-present PanJiaChen
 git clone https://github.com/adempiere/adempiere-vue.git
 
 # install dependency
-yarn
+npm install
 
 # develop
-yarn dev
+npm run dev
 ```
 
 ## Demo
+
 [ADempiere UI Demo](https://demo-ui.erpya.com/)
