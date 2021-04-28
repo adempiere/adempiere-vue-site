@@ -28,5 +28,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 14
+      - run: set -e
       - run: npm i
       - run: npm run build:prod --if-present
