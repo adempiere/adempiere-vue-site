@@ -10,10 +10,10 @@ The documentation source of [adempiere-vue](https://github.com/adempiere/adempie
 git clone https://github.com/adempiere/adempiere-vue-site.git
 
 # install dependency
-npm install
+yarn install
 
 # develop
-npm run dev
+yarn dev
 ```
 
 open http://localhost:8080/adempiere-vue-site/
