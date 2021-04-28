@@ -32,6 +32,8 @@ jobs:
       - run: npm i
       - run: npm run build
       - run: |
+            git clone https://github.com/adempiere/adempiere-vue-site.git --branch gh-pages --single-branch gh-pages
+            cp -r docs/.vuepress/dist/* gh-pages/
             cd docs/.vuepress/dist 
             touch .nojekyll 
             git init 
