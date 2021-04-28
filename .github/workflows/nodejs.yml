@@ -35,10 +35,10 @@ jobs:
             cd docs/.vuepress/dist 
             touch .nojekyll 
             git init 
-            git config --global user.email "yamelsenih@gmail.com" 
-            git config --global user.name "Yamel Senih" 
-            git add -A 
-            git commit -m 'deploy'
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add .
+            git commit -m "Update documentation" -a || true
       - uses: ad-m/github-push-action@master
         with:
           branch: gh-pages
