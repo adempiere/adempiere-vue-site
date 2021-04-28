@@ -30,4 +30,4 @@ jobs:
           node-version: 14
       - run: set -e
       - run: npm i
-      - run: npm run build:prod --if-present
+      - run: npm run build
