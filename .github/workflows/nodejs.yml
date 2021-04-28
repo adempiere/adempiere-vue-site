@@ -31,7 +31,7 @@ jobs:
       - run: set -e
       - run: npm i
       - run: npm run build
-      - run: cd docs/.vuepress/dist
+      - run: mv docs/.vuepress/dist/* docs
       - uses: github-actions-x/commit@v2.8
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
