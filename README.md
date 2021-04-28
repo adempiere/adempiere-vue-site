@@ -1,4 +1,5 @@
 # adempiere-vue-site
+
 The documentation source of [adempiere-vue](https://github.com/adempiere/adempiere-vue)
 
 [Online](https://adempiere.github.io/adempiere-vue-site)
@@ -10,10 +11,10 @@ The documentation source of [adempiere-vue](https://github.com/adempiere/adempie
 git clone https://github.com/adempiere/adempiere-vue-site.git
 
 # install dependency
-yarn install
+npm install
 
 # develop
-yarn dev
+npm run dev
 ```
 
 open http://localhost:8080/adempiere-vue-site/
