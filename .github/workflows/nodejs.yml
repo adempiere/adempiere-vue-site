@@ -39,6 +39,5 @@ jobs:
           commit-message: 'build page'
           force-add: true
           force-push: true
-          files: dist 
           email: yamelsenih@gmail.com 
           name: Github Actions 
