@@ -34,6 +34,8 @@ jobs:
       - run: cd docs/.vuepress/dist
       - run: touch .nojekyll
       - run: git init
+      - run: git config --global user.email "yamelsenih@gmail.com"
+      - run: git config --global user.name "Yamel Senih"
       - run: git add -A
       - run: git commit -m 'deploy'
       - run: git push -f "https://${{ secrets.GITHUB_TOKEN }}@github.com/adempiere/adempiere-vue-site.git" master:gh-pages
