@@ -31,6 +31,7 @@ jobs:
       - run: set -e
       - run: npm i
       - run: npm run build
+      - run: cd docs/.vuepress/dist
       - uses: github-actions-x/commit@v2.8
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -38,6 +39,6 @@ jobs:
           commit-message: 'build page'
           force-add: true
           force-push: true
-          files: docs/.vuepress/dist 
+          files: dist 
           email: yamelsenih@gmail.com 
           name: Github Actions 
