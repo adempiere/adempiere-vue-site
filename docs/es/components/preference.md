@@ -21,7 +21,7 @@ Por defecto, el campo contiene de la configuración de preferencia
 
 ## Imagen del Componente
 
-![Preferencia en Versión Móvil y de Escritorio](../resourices/preference-desktop-mobile.png "Preferencia en Versión Móvil y de Escritorio")
+![Preferencia en Versión Móvil y de Escritorio](../resources/preference-desktop-mobile.png "Preferencia en Versión Móvil y de Escritorio")
 
 ## ¿Cómo se utiliza en la versión de Escritorio?
 
