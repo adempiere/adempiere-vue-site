@@ -5,20 +5,20 @@ var EcosystemNav = [
     textZH: '项目',
     items: [
       {
-        text: 'adempiere-vue',
+        text: 'ADempiere Vue',
         link: 'https://github.com/adempiere/adempiere-vue'
       },
       {
-        text: 'vue-admin-template',
-        link: 'https://github.com/adempiere/vue-admin-template'
+        text: 'ADempiere Vue Documentation',
+        link: 'https://github.com/adempiere/adempiere-vue-site'
       },
       {
-        text: 'electron-vue-admin',
-        link: 'https://github.com/PanJiaChen/electron-vue-admin'
+        text: 'ADempiere Proxy',
+        link: 'https://github.com/adempiere/proxy-adempiere-api'
       },
       {
-        text: 'vue-typescript-admin-template',
-        link: 'https://github.com/Armour/vue-typescript-admin-template'
+        text: 'ADempiere Backend',
+        link: 'https://github.com/adempiere/adempiere-gRPC-Server'
       },
       {
         text: 'awesome-project',
